@@ -26,7 +26,7 @@ export default function HeroSection() {
             서비스 둘러보기
           </a>
           <a
-            href="tel:02-1234-5678"
+            href="tel:010-2356-8836"
             className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all"
           >
             상담 문의하기

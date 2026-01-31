@@ -38,8 +38,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">주소</h4>
-                  <p className="text-gray-600">서울시 강남구 테헤란로 123</p>
-                  <p className="text-gray-600">OASIS빌딩 5층</p>
+                  <p className="text-gray-600">경기도 파주시 미래로 369-27</p>
+                  <p className="text-gray-600">201호</p>
                 </div>
               </div>
 
@@ -52,8 +52,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">전화번호</h4>
-                  <a href="tel:02-1234-5678" className="text-blue-600 hover:underline text-lg font-medium">
-                    02-1234-5678
+                  <a href="tel:010-2356-8836" className="text-blue-600 hover:underline text-lg font-medium">
+                    010-2356-8836
                   </a>
                 </div>
               </div>
@@ -82,8 +82,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">운영시간</h4>
-                  <p className="text-gray-600">스터디카페: 24시간 연중무휴</p>
-                  <p className="text-gray-600">사무실 상담: 평일 09:00 - 18:00</p>
+                  <p className="text-gray-600">24시간 연중무휴</p>
                 </div>
               </div>
 
@@ -95,9 +94,9 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">대중교통</h4>
-                  <p className="text-gray-600">지하철 2호선 강남역 3번 출구 도보 5분</p>
-                  <p className="text-gray-600">버스 정류장 '강남역' 하차</p>
+                  <h4 className="font-semibold text-gray-900 mb-1">찾아오시는 길</h4>
+                  <p className="text-gray-600">운정신도시 내 위치</p>
+                  <p className="text-gray-600">주차 가능</p>
                 </div>
               </div>
             </div>
@@ -105,7 +104,7 @@ export default function ContactSection() {
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:02-1234-5678"
+                href="tel:010-2356-8836"
                 className="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

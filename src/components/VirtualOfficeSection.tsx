@@ -1,19 +1,19 @@
 const benefits = [
   {
     title: "사업자등록 가능",
-    description: "강남구 프리미엄 주소로 사업자등록이 가능합니다.",
+    description: "파주시 주소로 사업자등록이 가능합니다.",
   },
   {
     title: "우편물 관리",
     description: "우편물 수령, 보관, 알림 서비스를 제공합니다.",
   },
   {
-    title: "전화 응대",
-    description: "전문 상담원이 귀사의 전화를 대신 받아드립니다.",
+    title: "실사 대응",
+    description: "세무서 및 관공서 실사에 대응해 드립니다.",
   },
   {
     title: "회의실 이용",
-    description: "월 일정 시간 회의실을 무료로 이용하실 수 있습니다.",
+    description: "필요시 회의실을 이용하실 수 있습니다.",
   },
 ];
 
@@ -32,8 +32,8 @@ export default function VirtualOfficeSection() {
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               실제 사무실 없이도 비즈니스 주소를 확보하세요.
-              강남의 프리미엄 주소로 기업 이미지를 높이고,
-              우편물 관리부터 전화 응대까지 모든 것을 해결해 드립니다.
+              파주 운정신도시에서 사업자등록부터 우편물 관리,
+              실사 대응까지 모든 것을 해결해 드립니다.
             </p>
 
             <div className="space-y-4 mb-8">

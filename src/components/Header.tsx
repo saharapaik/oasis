@@ -41,7 +41,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="tel:02-1234-5678"
+              href="tel:010-2356-8836"
               className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm"
             >
               상담문의
@@ -93,7 +93,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="tel:02-1234-5678"
+              href="tel:010-2356-8836"
               className="block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full text-center hover:bg-blue-700 transition-colors"
             >
               상담문의
