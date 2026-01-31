@@ -29,7 +29,7 @@ export default function StudyCafeSection() {
               </div>
               <div>
                 <div className="text-4xl font-bold text-[#8B6F47] mb-2">FREE</div>
-                <p className="text-[#6B5D52]">무제한 음료 제공</p>
+                <p className="text-[#6B5D52]">정수기 & 휴게실</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-[#8B6F47] mb-2">1Gbps</div>

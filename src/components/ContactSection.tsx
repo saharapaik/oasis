@@ -18,7 +18,7 @@ export default function ContactSection() {
           {/* Map */}
           <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[500px] bg-gray-100 rounded-2xl overflow-hidden warm-shadow-lg">
             <iframe
-              src="https://map.kakao.com/link/map/운정 오아시스 스터디카페,37.6514,126.7709"
+              src="https://map.kakao.com/?q=경기도 파주시 미래로 369-27"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '500px' }}
@@ -116,7 +116,7 @@ export default function ContactSection() {
                 전화 문의
               </a>
               <a
-                href="https://map.kakao.com/link/to/운정 오아시스 스터디카페,37.6514,126.7709"
+                href="https://map.kakao.com/link/to/경기도 파주시 미래로 369-27,37.6514,126.7709"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 border-2 border-[#8B6F47] text-[#5D4E37] px-6 py-4 rounded-full font-semibold hover:bg-[#F5F1E8] transition-colors"
@@ -142,33 +142,20 @@ export default function ContactSection() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Phone */}
               <a
                 href="tel:010-2356-8836"
-                className="group flex flex-col items-center p-6 bg-[#F5F1E8] hover:bg-[#F5E6D3] rounded-xl transition-colors"
+                className="group flex flex-col items-center p-8 bg-[#F5F1E8] hover:bg-[#F5E6D3] rounded-xl transition-colors"
               >
-                <div className="w-16 h-16 bg-[#8B6F47] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-20 h-20 bg-[#8B6F47] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <h4 className="font-bold text-[#5D4E37] mb-2">전화 문의</h4>
+                <h4 className="font-bold text-[#5D4E37] mb-2 text-lg">전화 문의</h4>
+                <p className="text-lg font-semibold text-[#8B6F47] mb-2">010-2356-8836</p>
                 <p className="text-sm text-[#6B5D52] text-center">즉시 상담 가능</p>
-              </a>
-
-              {/* Email */}
-              <a
-                href="mailto:solbay@naver.com?subject=OASIS 문의사항&body=안녕하세요, 문의드립니다.%0D%0A%0D%0A이름:%0D%0A연락처:%0D%0A문의내용:%0D%0A"
-                className="group flex flex-col items-center p-6 bg-[#F5F1E8] hover:bg-[#F5E6D3] rounded-xl transition-colors"
-              >
-                <div className="w-16 h-16 bg-[#7A9D7C] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-[#5D4E37] mb-2">이메일 문의</h4>
-                <p className="text-sm text-[#6B5D52] text-center">24시간 접수</p>
               </a>
 
               {/* Kakao */}
@@ -176,16 +163,30 @@ export default function ContactSection() {
                 href="http://pf.kakao.com/_xlGxjIn/chat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center p-6 bg-[#FEE500] hover:bg-[#FFD700] rounded-xl transition-colors"
+                className="group flex flex-col items-center p-8 bg-[#FEE500] hover:bg-[#FFD700] rounded-xl transition-colors relative"
               >
-                <div className="w-16 h-16 bg-[#3C1E1E] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <div className="absolute top-4 right-4 bg-[#FF3D00] text-white text-xs px-3 py-1 rounded-full font-bold">
+                  추천!
+                </div>
+                <div className="w-20 h-20 bg-[#3C1E1E] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.454 1.584 4.617 4 5.932V21l4.194-2.097C10.784 18.97 11.388 19 12 19c5.523 0 10-3.477 10-7.5S17.523 3 12 3z"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-[#3C1E1E] mb-2">카카오톡 문의</h4>
-                <p className="text-sm text-[#3C1E1E] text-center">빠른 답변</p>
+                <h4 className="font-bold text-[#3C1E1E] mb-2 text-lg">카카오톡 문의</h4>
+                <p className="text-sm text-[#3C1E1E] text-center font-medium mb-1">가장 빠른 답변</p>
+                <p className="text-xs text-[#3C1E1E]/70 text-center">클릭하면 카카오톡 채널로 이동</p>
               </a>
+            </div>
+
+            {/* Email info (non-clickable) */}
+            <div className="mt-6 p-4 bg-[#F5F1E8] rounded-lg text-center">
+              <p className="text-sm text-[#6B5D52]">
+                이메일 문의: <span className="font-semibold text-[#5D4E37]">solbay@naver.com</span>
+              </p>
+              <p className="text-xs text-[#6B5D52] mt-1">
+                * 빠른 답변을 원하시면 전화 또는 카카오톡을 이용해주세요
+              </p>
             </div>
 
             <div className="mt-8 text-center">
