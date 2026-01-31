@@ -1,24 +1,27 @@
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-[#FFF9F0] paper-texture">
+    <section id="contact" className="py-32 bg-[#FFF9F0] paper-texture">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#5D4E37] mb-4">
-            오시는 길
+        <div className="text-center mb-16">
+          <span className="text-[#8B6F47] text-sm tracking-[0.3em] uppercase font-medium mb-4 block">
+            Contact & Location
+          </span>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5D4E37] mb-6">
+            오시는 길 & 문의
           </h2>
-          <p className="text-lg text-[#6B5D52]">
+          <p className="text-xl text-[#6B5D52]">
             OASIS에서 여러분을 기다리고 있습니다.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Map */}
-          <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[400px] bg-gray-100 rounded-2xl overflow-hidden">
+          <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[500px] bg-gray-100 rounded-2xl overflow-hidden warm-shadow-lg">
             <iframe
-              src="https://map.kakao.com/link/map/OASIS 스터디카페,37.6514,126.7709"
+              src="https://map.kakao.com/link/map/운정 오아시스 스터디카페,37.6514,126.7709"
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '400px' }}
+              style={{ border: 0, minHeight: '500px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -105,7 +108,7 @@ export default function ContactSection() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:010-2356-8836"
-                className="flex items-center justify-center gap-2 bg-[#8B6F47] text-[#FFF9F0] px-6 py-3 rounded-full font-semibold hover:bg-[#5D4E37] transition-colors warm-shadow"
+                className="flex items-center justify-center gap-2 bg-[#8B6F47] text-[#FFF9F0] px-6 py-4 rounded-full font-semibold hover:bg-[#5D4E37] transition-colors warm-shadow"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -113,16 +116,82 @@ export default function ContactSection() {
                 전화 문의
               </a>
               <a
-                href="https://map.kakao.com/link/to/OASIS 스터디카페,37.6514,126.7709"
+                href="https://map.kakao.com/link/to/운정 오아시스 스터디카페,37.6514,126.7709"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 border-2 border-[#8B6F47] text-[#5D4E37] px-6 py-3 rounded-full font-semibold hover:bg-[#F5F1E8] transition-colors"
+                className="flex items-center justify-center gap-2 border-2 border-[#8B6F47] text-[#5D4E37] px-6 py-4 rounded-full font-semibold hover:bg-[#F5F1E8] transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                길찾기
+                카카오맵 길찾기
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Form / Inquiry CTA */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 md:p-12 warm-shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#5D4E37] mb-4">
+                문의하기
+              </h3>
+              <p className="text-[#6B5D52] text-lg">
+                궁금한 사항이 있으시면 편하게 연락주세요
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Phone */}
+              <a
+                href="tel:010-2356-8836"
+                className="group flex flex-col items-center p-6 bg-[#F5F1E8] hover:bg-[#F5E6D3] rounded-xl transition-colors"
+              >
+                <div className="w-16 h-16 bg-[#8B6F47] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-[#5D4E37] mb-2">전화 문의</h4>
+                <p className="text-sm text-[#6B5D52] text-center">즉시 상담 가능</p>
+              </a>
+
+              {/* Email */}
+              <a
+                href="mailto:solbay@naver.com?subject=OASIS 문의사항&body=안녕하세요, 문의드립니다.%0D%0A%0D%0A이름:%0D%0A연락처:%0D%0A문의내용:%0D%0A"
+                className="group flex flex-col items-center p-6 bg-[#F5F1E8] hover:bg-[#F5E6D3] rounded-xl transition-colors"
+              >
+                <div className="w-16 h-16 bg-[#7A9D7C] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-[#5D4E37] mb-2">이메일 문의</h4>
+                <p className="text-sm text-[#6B5D52] text-center">24시간 접수</p>
+              </a>
+
+              {/* Kakao */}
+              <a
+                href="http://pf.kakao.com/_xlGxjIn/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center p-6 bg-[#FEE500] hover:bg-[#FFD700] rounded-xl transition-colors"
+              >
+                <div className="w-16 h-16 bg-[#3C1E1E] text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.454 1.584 4.617 4 5.932V21l4.194-2.097C10.784 18.97 11.388 19 12 19c5.523 0 10-3.477 10-7.5S17.523 3 12 3z"/>
+                  </svg>
+                </div>
+                <h4 className="font-bold text-[#3C1E1E] mb-2">카카오톡 문의</h4>
+                <p className="text-sm text-[#3C1E1E] text-center">빠른 답변</p>
+              </a>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-sm text-[#6B5D52]">
+                운영시간: 24시간 연중무휴 | 문의 답변: 평일 09:00-21:00
+              </p>
             </div>
           </div>
         </div>

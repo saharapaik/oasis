@@ -61,15 +61,28 @@ export default function VirtualOfficeSection() {
               </div>
             </div>
 
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-3 bg-[#7A9D7C] text-white px-8 py-4 text-lg font-semibold hover:bg-[#5D6E59] transition-colors group"
-            >
-              플랜 확인하기
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#pricing"
+                className="inline-flex items-center justify-center gap-3 bg-[#7A9D7C] text-white px-8 py-4 text-lg font-semibold hover:bg-[#5D6E59] transition-colors group"
+              >
+                플랜 확인하기
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="https://docs.google.com/forms/d/1BLz6-VJ6ClRiciqbcQ9hcVM7oItdhsj2il-jkMpf1lk/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 border-2 border-[#7A9D7C] text-[#5D4E37] px-8 py-4 text-lg font-semibold hover:bg-[#F5F1E8] transition-colors group"
+              >
+                비상주오피스 신청하기
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
