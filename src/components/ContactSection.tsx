@@ -18,7 +18,7 @@ export default function ContactSection() {
           {/* Map */}
           <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[500px] bg-gray-100 rounded-2xl overflow-hidden warm-shadow-lg">
             <iframe
-              src="https://www.google.com/maps?q=37.6514,126.7709&hl=ko&z=16&output=embed"
+              src="https://www.google.com/maps?q=경기도+파주시+미래로+369-27&hl=ko&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '500px' }}
