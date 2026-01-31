@@ -44,51 +44,51 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
       </svg>
     ),
-    features: ["컬러/흑백 출력", "스캔", "제본", "명함 제작"],
+    features: ["컬러/흑백 출력", "스캔", "팩스", "코팅"],
     color: "purple",
   },
 ];
 
 const colorStyles = {
   blue: {
-    bg: "bg-blue-50",
-    iconBg: "bg-blue-100",
-    iconText: "text-blue-600",
-    badge: "bg-blue-100 text-blue-700",
-    hover: "hover:border-blue-200",
+    bg: "bg-[#F5F1E8]",
+    iconBg: "bg-[#F5E6D3]",
+    iconText: "text-[#8B6F47]",
+    badge: "bg-[#F5E6D3] text-[#5D4E37]",
+    hover: "hover:border-[#E8B4A4]",
   },
   emerald: {
-    bg: "bg-emerald-50",
-    iconBg: "bg-emerald-100",
-    iconText: "text-emerald-600",
-    badge: "bg-emerald-100 text-emerald-700",
-    hover: "hover:border-emerald-200",
+    bg: "bg-[#F5F7F4]",
+    iconBg: "bg-[#D4E0D0]",
+    iconText: "text-[#7A9D7C]",
+    badge: "bg-[#D4E0D0] text-[#5D6E59]",
+    hover: "hover:border-[#A8B5A0]",
   },
   amber: {
-    bg: "bg-amber-50",
-    iconBg: "bg-amber-100",
-    iconText: "text-amber-600",
-    badge: "bg-amber-100 text-amber-700",
-    hover: "hover:border-amber-200",
+    bg: "bg-[#FFF9F0]",
+    iconBg: "bg-[#F5E6D3]",
+    iconText: "text-[#8B6F47]",
+    badge: "bg-[#F5E6D3] text-[#5D4E37]",
+    hover: "hover:border-[#E8B4A4]",
   },
   purple: {
-    bg: "bg-purple-50",
-    iconBg: "bg-purple-100",
-    iconText: "text-purple-600",
-    badge: "bg-purple-100 text-purple-700",
-    hover: "hover:border-purple-200",
+    bg: "bg-[#EFF3ED]",
+    iconBg: "bg-[#D4E0D0]",
+    iconText: "text-[#7A9D7C]",
+    badge: "bg-[#D4E0D0] text-[#5D6E59]",
+    hover: "hover:border-[#A8B5A0]",
   },
 };
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-white paper-texture">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#5D4E37] mb-4">
             OASIS의 서비스
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#6B5D52] max-w-2xl mx-auto">
             다양한 목적에 맞는 공간과 서비스를 제공합니다.<br />
             당신의 필요에 맞는 서비스를 선택하세요.
           </p>
@@ -101,13 +101,13 @@ export default function ServicesSection() {
               <a
                 key={service.id}
                 href={`#${service.id}`}
-                className={`group bg-white rounded-2xl p-6 border border-gray-100 ${style.hover} transition-all hover:shadow-lg`}
+                className={`group bg-[#FFF9F0] rounded-2xl p-6 border border-[#E8E3D9] ${style.hover} transition-all hover:warm-shadow-lg`}
               >
                 <div className={`w-14 h-14 ${style.iconBg} ${style.iconText} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-bold text-[#5D4E37] mb-2">{service.title}</h3>
+                <p className="text-[#6B5D52] text-sm mb-4 leading-relaxed">{service.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {service.features.map((feature) => (
                     <span

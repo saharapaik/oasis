@@ -4,47 +4,47 @@ const benefits = [
     description: "파주시 주소로 사업자등록이 가능합니다.",
   },
   {
-    title: "우편물 관리",
-    description: "우편물 수령, 보관, 알림 서비스를 제공합니다.",
+    title: "법인설립 지원",
+    description: "법인설립에 필요한 주소 제공 및 안내 서비스를 제공합니다.",
   },
   {
-    title: "실사 대응",
-    description: "세무서 및 관공서 실사에 대응해 드립니다.",
+    title: "회의실 할인",
+    description: "필요시 회의실을 할인된 가격으로 이용하실 수 있습니다.",
   },
   {
-    title: "회의실 이용",
-    description: "필요시 회의실을 이용하실 수 있습니다.",
+    title: "스터디카페 무료",
+    description: "플랜에 따라 스터디카페 무료 이용 시간을 제공합니다.",
   },
 ];
 
 export default function VirtualOfficeSection() {
   return (
-    <section id="virtual-office" className="py-20 bg-emerald-50">
+    <section id="virtual-office" className="py-20 bg-[#F5F7F4] paper-texture">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1">
-            <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block bg-[#D4E0D0] text-[#5D6E59] px-4 py-1 rounded-full text-sm font-medium mb-4">
               Virtual Office
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#5D4E37] mb-4">
               스마트한 비즈니스의 시작<br />비상주오피스
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-[#6B5D52] mb-8 leading-relaxed">
               실제 사무실 없이도 비즈니스 주소를 확보하세요.
-              파주 운정신도시에서 사업자등록부터 우편물 관리,
-              실사 대응까지 모든 것을 해결해 드립니다.
+              파주 운정신도시에서 사업자등록부터 법인설립 지원,
+              회의실 할인까지 스마트한 비즈니스를 시작하세요.
             </p>
 
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <div key={benefit.title} className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center shrink-0 font-semibold text-sm">
+                  <div className="w-8 h-8 bg-[#7A9D7C] text-[#FFF9F0] rounded-full flex items-center justify-center shrink-0 font-semibold text-sm">
                     {index + 1}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{benefit.title}</h4>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <h4 className="font-semibold text-[#5D4E37]">{benefit.title}</h4>
+                    <p className="text-[#6B5D52]">{benefit.description}</p>
                   </div>
                 </div>
               ))}
@@ -52,7 +52,7 @@ export default function VirtualOfficeSection() {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#7A9D7C] text-[#FFF9F0] px-6 py-3 rounded-full font-semibold hover:bg-[#5D6E59] transition-colors warm-shadow"
             >
               상담 신청하기
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,23 +61,21 @@ export default function VirtualOfficeSection() {
             </a>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Image */}
           <div className="order-1 lg:order-2 relative">
-            <div className="aspect-[4/3] bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl overflow-hidden flex items-center justify-center">
-              <div className="text-center p-8">
-                <svg className="w-24 h-24 mx-auto text-emerald-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-emerald-600 font-medium">비상주오피스 이미지</p>
-                <p className="text-emerald-500 text-sm mt-1">권장 크기: 800x600px</p>
-              </div>
+            <div className="aspect-[4/3] bg-gradient-to-br from-[#E8E3D9] to-[#D4CABD] rounded-2xl overflow-hidden warm-shadow-lg">
+              <img
+                src="/images/entrance.jpg"
+                alt="OASIS 비상주오피스 입구"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Trust badge */}
-            <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
-              <svg className="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="absolute top-4 right-4 bg-[#FFF9F0] px-4 py-2 rounded-lg warm-shadow flex items-center gap-2">
+              <svg className="w-5 h-5 text-[#7A9D7C]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm font-medium text-gray-700">사업자등록 가능</span>
+              <span className="text-sm font-medium text-[#5D4E37]">사업자등록 가능</span>
             </div>
           </div>
         </div>

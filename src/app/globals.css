@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --secondary: #10b981;
-  --accent: #f59e0b;
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm Library Color Palette */
+  --warm-beige: #F5F1E8;
+  --rich-brown: #8B6F47;
+  --soft-sage: #A8B5A0;
+  --cream: #FFF9F0;
+  --deep-wood: #5D4E37;
+  --warm-gray: #E8E3D9;
+  --soft-coral: #E8B4A4;
+  --library-green: #7A9D7C;
+
+  /* Legacy compatibility */
+  --primary: #8B6F47;
+  --primary-dark: #5D4E37;
+  --secondary: #7A9D7C;
+  --accent: #E8B4A4;
+  --background: #F5F1E8;
+  --foreground: #5D4E37;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2D2419;
+    --foreground: #F5F1E8;
   }
 }
 
@@ -26,20 +37,46 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Serif headings */
+h1, h2, h3 {
+  font-family: 'Noto Serif KR', serif;
+}
+
+/* Paper texture effect */
+.paper-texture {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 111, 71, 0.02) 2px,
+      rgba(139, 111, 71, 0.02) 4px
+    );
+}
+
+/* Warm shadow */
+.warm-shadow {
+  box-shadow: 0 4px 20px rgba(139, 111, 71, 0.15);
+}
+
+.warm-shadow-lg {
+  box-shadow: 0 10px 40px rgba(139, 111, 71, 0.2);
+}
+
+/* Custom scrollbar - warm theme */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--warm-beige);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  background: var(--rich-brown);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--deep-wood);
 }

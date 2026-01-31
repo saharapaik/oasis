@@ -17,12 +17,12 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <header className="fixed top-0 left-0 right-0 bg-[#FFF9F0]/95 backdrop-blur-sm warm-shadow z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-blue-600">OASIS</span>
+            <span className="text-2xl font-bold text-[#8B6F47]">OASIS</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -31,7 +31,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm"
+                className="text-[#5D4E37] hover:text-[#8B6F47] transition-colors font-medium text-sm"
               >
                 {item.label}
               </a>
@@ -42,7 +42,7 @@ export default function Header() {
           <div className="hidden md:block">
             <a
               href="tel:010-2356-8836"
-              className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm"
+              className="bg-[#8B6F47] text-[#FFF9F0] px-5 py-2 rounded-full hover:bg-[#5D4E37] transition-colors font-medium text-sm warm-shadow"
             >
               상담문의
             </a>
@@ -81,12 +81,12 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t border-[#E8E3D9]">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="block py-2 text-[#5D4E37] hover:text-[#8B6F47] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -94,7 +94,7 @@ export default function Header() {
             ))}
             <a
               href="tel:010-2356-8836"
-              className="block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full text-center hover:bg-blue-700 transition-colors"
+              className="block mt-4 bg-[#8B6F47] text-[#FFF9F0] px-5 py-2 rounded-full text-center hover:bg-[#5D4E37] transition-colors"
             >
               상담문의
             </a>
