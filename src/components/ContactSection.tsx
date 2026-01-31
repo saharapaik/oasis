@@ -160,7 +160,7 @@ export default function ContactSection() {
 
               {/* Kakao */}
               <a
-                href="http://pf.kakao.com/_xlGxjIn/chat"
+                href="http://pf.kakao.com/_gpqxnK/chat"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center p-8 bg-[#FEE500] hover:bg-[#FFD700] rounded-xl transition-colors relative"
