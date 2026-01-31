@@ -18,7 +18,7 @@ export default function ContactSection() {
           {/* Map */}
           <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[500px] bg-gray-100 rounded-2xl overflow-hidden warm-shadow-lg">
             <iframe
-              src="https://map.kakao.com/?q=경기도 파주시 미래로 369-27"
+              src="https://www.google.com/maps?q=37.6514,126.7709&hl=ko&z=16&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '500px' }}
@@ -116,7 +116,7 @@ export default function ContactSection() {
                 전화 문의
               </a>
               <a
-                href="https://map.kakao.com/link/to/경기도 파주시 미래로 369-27,37.6514,126.7709"
+                href="https://map.naver.com/p/search/경기도 파주시 미래로 369-27"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 border-2 border-[#8B6F47] text-[#5D4E37] px-6 py-4 rounded-full font-semibold hover:bg-[#F5F1E8] transition-colors"
@@ -124,7 +124,7 @@ export default function ContactSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                카카오맵 길찾기
+                네이버 지도에서 보기
               </a>
             </div>
           </div>
@@ -173,9 +173,9 @@ export default function ContactSection() {
                     <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.454 1.584 4.617 4 5.932V21l4.194-2.097C10.784 18.97 11.388 19 12 19c5.523 0 10-3.477 10-7.5S17.523 3 12 3z"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-[#3C1E1E] mb-2 text-lg">카카오톡 문의</h4>
-                <p className="text-sm text-[#3C1E1E] text-center font-medium mb-1">가장 빠른 답변</p>
-                <p className="text-xs text-[#3C1E1E]/70 text-center">클릭하면 카카오톡 채널로 이동</p>
+                <h4 className="font-bold text-[#3C1E1E] mb-2 text-lg">카카오톡 채널</h4>
+                <p className="text-sm text-[#3C1E1E] text-center font-medium mb-1">채널 추가 후 문의 가능</p>
+                <p className="text-xs text-[#3C1E1E]/70 text-center">클릭하여 채널을 추가해주세요</p>
               </a>
             </div>
 
