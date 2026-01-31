@@ -135,6 +135,74 @@ export default function PricingSection() {
           </div>
         </div>
 
+        {/* 회의실 요금 */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            회의실 이용요금
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">미팅룸 A</h4>
+              <p className="text-gray-600 mb-4">2~4인</p>
+              <div className="text-3xl font-bold text-amber-600">5,000<span className="text-lg text-gray-600">원/시간</span></div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">컨퍼런스룸</h4>
+              <p className="text-gray-600 mb-4">10~20인</p>
+              <div className="text-3xl font-bold text-amber-600">20,000<span className="text-lg text-gray-600">원/시간</span></div>
+            </div>
+          </div>
+        </div>
+
+        {/* 프린트/복사 서비스 */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            프린트 & 부가서비스
+          </h3>
+
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="text-center p-4 bg-gray-50 rounded-xl">
+                <p className="text-gray-600 text-sm mb-1">문서출력 (흑백)</p>
+                <p className="text-xl font-bold text-gray-900">70원~</p>
+              </div>
+              <div className="text-center p-4 bg-gray-50 rounded-xl">
+                <p className="text-gray-600 text-sm mb-1">문서출력 (컬러)</p>
+                <p className="text-xl font-bold text-gray-900">200원</p>
+              </div>
+              <div className="text-center p-4 bg-gray-50 rounded-xl">
+                <p className="text-gray-600 text-sm mb-1">복사 (흑백)</p>
+                <p className="text-xl font-bold text-gray-900">70원~</p>
+              </div>
+              <div className="text-center p-4 bg-gray-50 rounded-xl">
+                <p className="text-gray-600 text-sm mb-1">복사 (컬러)</p>
+                <p className="text-xl font-bold text-gray-900">200원</p>
+              </div>
+              <div className="text-center p-4 bg-gray-50 rounded-xl">
+                <p className="text-gray-600 text-sm mb-1">팩스발송</p>
+                <p className="text-xl font-bold text-gray-900">500원</p>
+              </div>
+              <div className="text-center p-4 bg-gray-50 rounded-xl">
+                <p className="text-gray-600 text-sm mb-1">코팅</p>
+                <p className="text-xl font-bold text-gray-900">1,000원</p>
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-gray-500 text-center">* 제본 서비스는 제공하지 않습니다</p>
+          </div>
+        </div>
+
         {/* 비상주오피스 요금 */}
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
