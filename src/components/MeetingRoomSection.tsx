@@ -5,7 +5,7 @@ const rooms = [
     price: "5,000원",
     priceUnit: "/시간",
     image: "/images/meeting-room-2.jpg",
-    features: ["TV 모니터", "화이트보드", "무료 음료", "화상회의"],
+    features: ["무료 Wi-Fi", "정수기 이용", "콘센트 완비", "쾌적한 냉난방", "주차 지원"],
   },
   {
     name: "컨퍼런스룸",
@@ -13,7 +13,7 @@ const rooms = [
     price: "20,000원",
     priceUnit: "/시간",
     image: "/images/meeting-room-1.jpg",
-    features: ["대형 스크린", "음향시스템", "빔프로젝터", "케이터링"],
+    features: ["대형 스크린", "빔프로젝터", "개인 콘센트", "쾌적한 냉난방", "주차 지원"],
   },
 ];
 
