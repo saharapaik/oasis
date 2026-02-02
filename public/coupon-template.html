@@ -195,17 +195,21 @@
     // URL 파라미터 읽기
     const params = new URLSearchParams(window.location.search);
 
-    // 쿠폰번호
-    const couponNo = params.get('no');
-    if (couponNo) {
-      document.getElementById('coupon-no').textContent = couponNo;
-    }
+    // 오늘 날짜
+    const today = new Date();
+    const yy = String(today.getFullYear()).slice(2);
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
 
-    // 유효기간
-    const expireDate = params.get('expire');
-    if (expireDate) {
-      document.getElementById('expire-date').textContent = expireDate + ' 까지';
-    }
+    // 쿠폰번호: ?no=001 만 입력하면 OASIS-2502-001 형식으로 자동 생성
+    const no = params.get('no') || '001';
+    const couponNo = `OASIS-${yy}${mm}-${no.padStart(3, '0')}`;
+    document.getElementById('coupon-no').textContent = couponNo;
+
+    // 유효기간: 오늘 + 30일 자동 계산
+    const expireDate = new Date(today);
+    expireDate.setDate(expireDate.getDate() + 30);
+    const expireStr = `${expireDate.getFullYear()}.${String(expireDate.getMonth() + 1).padStart(2, '0')}.${String(expireDate.getDate()).padStart(2, '0')}`;
+    document.getElementById('expire-date').textContent = expireStr + ' 까지';
   </script>
 </body>
 </html>
