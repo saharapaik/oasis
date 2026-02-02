@@ -58,22 +58,24 @@ export default function EventSection() {
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-[#7A9D7C] text-white rounded-full flex items-center justify-center shrink-0 font-bold text-sm">3</div>
                     <div>
-                      <p className="text-[#5D4E37] font-medium">리뷰 캡처 + 영수증 제출</p>
+                      <p className="text-[#5D4E37] font-medium">카카오톡 친구추가 후 리뷰 캡처 + 영수증 전송</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-[#7A9D7C] text-white rounded-full flex items-center justify-center shrink-0 font-bold text-sm">4</div>
                     <div>
-                      <p className="text-[#5D4E37] font-medium">2시간 무료 이용권 받기 🎁</p>
+                      <p className="text-[#5D4E37] font-medium">카카오톡으로 쿠폰 받기 🎁</p>
                     </div>
                   </div>
                 </div>
 
                 <a
-                  href="tel:010-2356-8836"
-                  className="inline-flex items-center gap-3 bg-[#5D4E37] text-white px-8 py-4 text-lg font-semibold hover:bg-[#8B6F47] transition-colors group"
+                  href="http://pf.kakao.com/_gpqxnK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#FAE100] text-[#3C1E1E] px-8 py-4 text-lg font-semibold hover:bg-[#F5D800] transition-colors group"
                 >
-                  이벤트 참여하기
+                  카카오톡 친구추가
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -109,7 +111,7 @@ export default function EventSection() {
             {/* Terms */}
             <div className="mt-8 pt-8 border-t border-[#E8E3D9]">
               <p className="text-sm text-[#6B5D52] text-center">
-                * 영수증과 리뷰 캡처를 카운터 또는 카카오톡으로 제출해주세요 |
+                * 카카오톡 친구추가 후 영수증과 리뷰 캡처를 전송해주세요 |
                 * 1인 1회 참여 가능 |
                 * 이용권 유효기간: 발급일로부터 30일
               </p>
