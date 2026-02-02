@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OASIS 2시간 무료 이용권</title>
+  <meta property="og:title" content="OASIS 2시간 무료 이용권">
+  <meta property="og:description" content="리뷰 이벤트 감사 쿠폰">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .coupon {
+      width: 400px;
+      background: linear-gradient(135deg, #F5F1E8 0%, #EDE8DC 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(93, 78, 55, 0.15);
+      position: relative;
+    }
+
+    .coupon::before,
+    .coupon::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #f5f5f5;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .coupon::before {
+      left: -12px;
+    }
+
+    .coupon::after {
+      right: -12px;
+    }
+
+    .coupon-header {
+      background: linear-gradient(135deg, #5D4E37 0%, #8B6F47 100%);
+      padding: 24px 30px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 4px;
+    }
+
+    .coupon-body {
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px dashed #D4C9B8;
+    }
+
+    .gift-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .coupon-title {
+      font-size: 14px;
+      color: #8B6F47;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .coupon-value {
+      font-size: 48px;
+      font-weight: 700;
+      color: #5D4E37;
+      line-height: 1.2;
+    }
+
+    .coupon-value span {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .coupon-desc {
+      font-size: 18px;
+      color: #6B5D52;
+      margin-top: 8px;
+    }
+
+    .coupon-info {
+      padding: 24px 30px;
+    }
+
+    .coupon-number {
+      background: #fff;
+      border: 2px solid #D4C9B8;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+    }
+
+    .coupon-number-label {
+      font-size: 11px;
+      color: #8B6F47;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .coupon-number-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #5D4E37;
+      letter-spacing: 2px;
+    }
+
+    .coupon-details {
+      font-size: 12px;
+      color: #8B6F47;
+      line-height: 1.8;
+    }
+
+    .coupon-details strong {
+      color: #5D4E37;
+    }
+
+    .stamp {
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border: 3px solid #8B6F47;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(15deg);
+      opacity: 0.8;
+    }
+
+    .stamp-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: #8B6F47;
+      text-align: center;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="coupon">
+    <div class="coupon-header">
+      <div class="logo">OASIS</div>
+    </div>
+
+    <div class="stamp">
+      <div class="stamp-text">리뷰<br>감사</div>
+    </div>
+
+    <div class="coupon-body">
+      <div class="gift-icon">🎁</div>
+      <div class="coupon-title">REVIEW EVENT</div>
+      <div class="coupon-value">2<span>시간</span></div>
+      <div class="coupon-desc">무료 이용권</div>
+    </div>
+
+    <div class="coupon-info">
+      <div class="coupon-number">
+        <div class="coupon-number-label">COUPON NO.</div>
+        <div class="coupon-number-value" id="coupon-no">OASIS-2502-001</div>
+      </div>
+      <div class="coupon-details">
+        <strong>유효기간</strong> <span id="expire-date">발급일로부터 30일</span><br>
+        <strong>사용방법</strong> 방문 시 직원에게 제시<br>
+        <strong>유의사항</strong> 1인 1회, 타 쿠폰과 중복 불가
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // URL 파라미터 읽기
+    const params = new URLSearchParams(window.location.search);
+
+    // 쿠폰번호
+    const couponNo = params.get('no');
+    if (couponNo) {
+      document.getElementById('coupon-no').textContent = couponNo;
+    }
+
+    // 유효기간
+    const expireDate = params.get('expire');
+    if (expireDate) {
+      document.getElementById('expire-date').textContent = expireDate + ' 까지';
+    }
+  </script>
+</body>
+</html>
