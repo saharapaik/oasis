@@ -197,12 +197,12 @@
 
     // 오늘 날짜
     const today = new Date();
-    const yy = String(today.getFullYear()).slice(2);
     const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
 
-    // 쿠폰번호: ?no=001 만 입력하면 OASIS-2502-001 형식으로 자동 생성
+    // 쿠폰번호: ?no=001 만 입력하면 OASIS-0202-001 형식으로 자동 생성 (월일)
     const no = params.get('no') || '001';
-    const couponNo = `OASIS-${yy}${mm}-${no.padStart(3, '0')}`;
+    const couponNo = `OASIS-${mm}${dd}-${no.padStart(3, '0')}`;
     document.getElementById('coupon-no').textContent = couponNo;
 
     // 유효기간: 오늘 + 30일 자동 계산
