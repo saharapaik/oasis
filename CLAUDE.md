@@ -5,6 +5,7 @@
 ## 배포 정보
 - **GitHub**: https://github.com/saharapaik/oasis.git
 - **배포**: Vercel (GitHub 연동, master 브랜치 push 시 자동 배포)
+- **사이트 URL**: https://oasis-study.vercel.app
 - **브랜치**: master
 
 ## 기술 스택
@@ -76,7 +77,7 @@ npm run lint   # 린트 검사
 
 ### 쿠폰 발급 링크
 ```
-https://oasis-nine-beta.vercel.app/coupon-template.html?no=001
+https://oasis-study.vercel.app/coupon-template.html?no=001
 ```
 - `001` 부분만 변경 (002, 003...)
 - 쿠폰번호 자동생성: OASIS-MMDD-XXX (예: OASIS-0202-001)
