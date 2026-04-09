@@ -2,7 +2,7 @@ const rooms = [
   {
     name: "미팅룸",
     capacity: "2-4인",
-    price: "5,000원",
+    price: "10,000원",
     priceUnit: "/시간",
     image: "/images/meeting-room-2.jpg",
     features: ["무료 Wi-Fi", "정수기 이용", "콘센트 완비", "쾌적한 냉난방", "주차 지원"],

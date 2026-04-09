@@ -155,7 +155,7 @@ export default function PricingSection() {
               </div>
               <h4 className="text-xl font-bold text-[#5D4E37] mb-2">미팅룸</h4>
               <p className="text-[#6B5D52] mb-4">2~4인</p>
-              <div className="text-3xl font-bold text-[#8B6F47]">5,000<span className="text-lg text-[#6B5D52]">원/시간</span></div>
+              <div className="text-3xl font-bold text-[#8B6F47]">10,000<span className="text-lg text-[#6B5D52]">원/시간</span></div>
             </div>
 
             <div className="bg-[#FFF9F0] rounded-2xl p-6 border border-[#E8E3D9] text-center warm-shadow">
