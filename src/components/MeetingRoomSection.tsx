@@ -10,7 +10,7 @@ const rooms = [
   {
     name: "컨퍼런스룸",
     capacity: "10-20인",
-    price: "20,000원",
+    price: "70,000원",
     priceUnit: "/시간",
     image: "/images/meeting-room-1.jpg",
     features: ["대형 스크린", "빔프로젝터", "개인 콘센트", "쾌적한 냉난방", "주차 지원"],
