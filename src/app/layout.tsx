@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import KakaoFloatingButton from "@/components/KakaoFloatingButton";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "OASIS - 파주 운정신도시 스터디카페 & 공유오피스",
@@ -74,6 +75,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <KakaoFloatingButton />
+        <Analytics />
       </body>
     </html>
   );
