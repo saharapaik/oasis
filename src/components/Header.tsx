@@ -2,18 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { BIZ, SERVICE_PAGES } from "@/lib/site";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  /**
+   * 앵커(#study-cafe) 대신 실제 라우트를 가리킨다 — 앵커는 색인 단위가 아니라서
+   * 하위 페이지로 가는 내부 링크가 없으면 크롤러가 새 페이지를 찾지 못한다.
+   */
   const navItems = [
-    { href: "#services", label: "서비스" },
-    { href: "#study-cafe", label: "스터디카페" },
-    { href: "#virtual-office", label: "비상주오피스" },
-    { href: "#meeting-room", label: "회의실" },
-    { href: "#print-cafe", label: "프린트카페" },
-    { href: "#pricing", label: "요금안내" },
-    { href: "#contact", label: "오시는길" },
+    ...SERVICE_PAGES.map((page) => ({ href: page.path, label: page.navLabel })),
+    { href: "/#contact", label: "오시는길" },
   ];
 
   return (
@@ -28,20 +28,20 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-[#5D4E37] hover:text-[#8B6F47] transition-colors font-medium text-sm"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="tel:010-2356-8836"
+              href={"tel:" + BIZ.phone}
               className="bg-[#8B6F47] text-[#FFF9F0] px-5 py-2 rounded-full hover:bg-[#5D4E37] transition-colors font-medium text-sm warm-shadow"
             >
               상담문의
@@ -83,17 +83,17 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-[#E8E3D9]">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="block py-2 text-[#5D4E37] hover:text-[#8B6F47] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <a
-              href="tel:010-2356-8836"
+              href={"tel:" + BIZ.phone}
               className="block mt-4 bg-[#8B6F47] text-[#FFF9F0] px-5 py-2 rounded-full text-center hover:bg-[#5D4E37] transition-colors"
             >
               상담문의

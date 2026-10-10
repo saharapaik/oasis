@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /coupon-template.html
 
 Sitemap: https://oasis-study.vercel.app/sitemap.xml

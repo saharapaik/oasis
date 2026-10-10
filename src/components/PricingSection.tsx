@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function PricingSection() {
   const hourlyPrices = [
     { time: "1시간", price: "1,000원" },
@@ -75,7 +77,7 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#5D4E37] mb-4">
-            요금 안내
+            파주 운정 OASIS 요금 안내
           </h2>
           <p className="text-lg text-[#6B5D52] max-w-2xl mx-auto">
             합리적인 가격으로 프리미엄 서비스를 경험하세요.
@@ -279,6 +281,14 @@ export default function PricingSection() {
         <div className="mt-12 text-center text-[#6B5D52] text-sm">
           <p>* 장기 계약 시 할인 혜택이 제공됩니다.</p>
           <p>* 자세한 사항은 전화 문의 부탁드립니다.</p>
+          <p className="mt-4">
+            <Link
+              href="/pricing"
+              className="text-[#8B6F47] font-semibold underline underline-offset-4 hover:text-[#5D4E37]"
+            >
+              전체 요금 안내 페이지 보기
+            </Link>
+          </p>
         </div>
       </div>
     </section>

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const rooms = [
   {
     name: "미팅룸",
@@ -26,12 +29,13 @@ export default function MeetingRoomSection() {
           <span className="text-[#8B6F47] text-sm tracking-[0.3em] uppercase font-medium mb-4 block">
             Meeting Rooms
           </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5D4E37] mb-6 leading-tight">
-            프로페셔널한<br />
-            미팅 공간
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5D4E37] mb-6 leading-tight">
+            파주 운정 회의실 대여<br />
+            2~20인 미팅룸·컨퍼런스룸
           </h2>
           <p className="text-xl text-[#6B5D52] max-w-2xl">
-            프레젠테이션에서 중요한 비즈니스 미팅까지. 최신 장비를 갖춘 프리미엄 회의실에서 성공적인 미팅을 진행하세요.
+            소규모 미팅은 시간당 10,000원, 20인까지 들어가는 컨퍼런스룸은
+            시간당 70,000원입니다. 빔프로젝터와 대형 스크린, 주차를 지원합니다.
           </p>
         </div>
 
@@ -43,10 +47,12 @@ export default function MeetingRoomSection() {
               className="group relative overflow-hidden warm-shadow-lg hover:warm-shadow-xl transition-all duration-500"
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img
+                <Image
                   src={room.image}
-                  alt={room.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  alt={"OASIS 파주 운정 " + room.name + " " + room.capacity + " 내부"}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="bg-white p-8">
@@ -91,6 +97,14 @@ export default function MeetingRoomSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
+          <p className="mt-6">
+            <Link
+              href="/meeting-room"
+              className="text-[#8B6F47] font-semibold underline underline-offset-4 hover:text-[#5D4E37]"
+            >
+              미팅룸·컨퍼런스룸 상세 안내 보기
+            </Link>
+          </p>
         </div>
       </div>
     </section>

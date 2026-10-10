@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function StudyCafeSection() {
   return (
     <section id="study-cafe" className="py-32 bg-white">
@@ -8,13 +11,14 @@ export default function StudyCafeSection() {
             <span className="text-[#8B6F47] text-sm tracking-[0.3em] uppercase font-medium mb-4 block">
               Study Cafe
             </span>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5D4E37] mb-8 leading-tight">
-              집중력을 극대화하는<br />
-              프리미엄 학습 공간
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5D4E37] mb-8 leading-tight">
+              파주 운정 스터디카페<br />
+              24시간 연중무휴
             </h2>
             <p className="text-xl text-[#6B5D52] mb-12 leading-relaxed max-w-xl">
-              24시간 운영되는 쾌적한 환경에서 당신의 학습 효율을 극대화하세요.
-              개인 좌석부터 그룹 스터디룸까지, 모든 것이 준비되어 있습니다.
+              운정신도시 미래로에서 24시간 이용할 수 있는 스터디카페입니다.
+              시간제 1시간 1,000원부터, 기간제 28일권 79,000원으로
+              수험 준비 일정에 맞춰 고를 수 있습니다.
             </p>
 
             {/* Features Grid */}
@@ -46,16 +50,25 @@ export default function StudyCafeSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
+
+            <Link
+              href="/study-cafe"
+              className="ml-6 inline-block text-[#8B6F47] font-semibold underline underline-offset-4 hover:text-[#5D4E37]"
+            >
+              스터디카페 상세 안내
+            </Link>
           </div>
 
           {/* Image - 2 columns */}
           <div className="lg:col-span-2">
             <div className="relative">
               <div className="aspect-[3/4] overflow-hidden warm-shadow-lg">
-                <img
+                <Image
                   src="/images/study-cafe.jpg"
-                  alt="OASIS 스터디카페"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  alt="OASIS 파주 운정 스터디카페 개인 좌석"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
               {/* Decorative element */}

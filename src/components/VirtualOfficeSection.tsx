@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function VirtualOfficeSection() {
   return (
     <section id="virtual-office" className="py-32 bg-[#F5F7F4]">
@@ -7,10 +10,12 @@ export default function VirtualOfficeSection() {
           <div className="lg:col-span-2 order-2 lg:order-1">
             <div className="relative">
               <div className="aspect-[3/4] overflow-hidden warm-shadow-lg">
-                <img
+                <Image
                   src="/images/entrance.jpg"
-                  alt="OASIS 비상주오피스"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  alt="OASIS 파주 운정 비상주오피스 건물 입구"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
               {/* Badge */}
@@ -32,13 +37,13 @@ export default function VirtualOfficeSection() {
             <span className="text-[#7A9D7C] text-sm tracking-[0.3em] uppercase font-medium mb-4 block">
               Virtual Office
             </span>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5D4E37] mb-8 leading-tight">
-              스마트한 비즈니스의<br />
-              시작
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5D4E37] mb-8 leading-tight">
+              파주 운정 비상주오피스<br />
+              사업자등록 주소
             </h2>
             <p className="text-xl text-[#6B5D52] mb-12 leading-relaxed max-w-xl">
-              실제 사무실 없이도 파주 운정신도시의 프리미엄 비즈니스 주소를 확보하세요.
-              사업자등록부터 법인설립까지 완벽 지원합니다.
+              실제 사무실 없이도 파주 운정신도시의 사업장 주소를 확보하세요.
+              월 18,000원부터 시작하고 사업자등록과 법인설립을 지원합니다.
             </p>
 
             {/* Benefits Grid */}
@@ -83,6 +88,15 @@ export default function VirtualOfficeSection() {
                 </svg>
               </a>
             </div>
+
+            <p className="mt-6">
+              <Link
+                href="/virtual-office"
+                className="text-[#7A9D7C] font-semibold underline underline-offset-4 hover:text-[#5D6E59]"
+              >
+                비상주오피스 플랜 비교 및 사업자등록 절차 보기
+              </Link>
+            </p>
           </div>
         </div>
       </div>

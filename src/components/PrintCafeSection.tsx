@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function PrintCafeSection() {
   return (
     <section id="print-cafe" className="py-32 bg-[#F5F7F4]">
@@ -8,12 +11,13 @@ export default function PrintCafeSection() {
             <span className="text-[#7A9D7C] text-sm tracking-[0.3em] uppercase font-medium mb-4 block">
               Print Cafe
             </span>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5D4E37] mb-8 leading-tight">
-              모든 문서 작업,<br />
-              한 곳에서
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5D4E37] mb-8 leading-tight">
+              파주 운정 프린트카페<br />
+              출력·복사·스캔·팩스
             </h2>
             <p className="text-xl text-[#6B5D52] mb-12 leading-relaxed max-w-xl">
-              출력부터 스캔, 팩스, 코팅까지. 필요한 모든 문서 작업을 합리적인 가격에 빠르게 해결하세요.
+              운정신도시에서 24시간 이용할 수 있는 프린트카페입니다.
+              흑백 70원, 컬러 200원부터 출력·복사·스캔·팩스·코팅을 해결하세요.
             </p>
 
             {/* Services Grid */}
@@ -39,15 +43,26 @@ export default function PrintCafeSection() {
             <p className="text-sm text-[#8B6F47] bg-[#FFF9F0] px-6 py-4">
               * 스캔 서비스: 100원/장 | 제본 서비스는 제공하지 않습니다
             </p>
+
+            <p className="mt-6">
+              <Link
+                href="/print-cafe"
+                className="text-[#7A9D7C] font-semibold underline underline-offset-4 hover:text-[#5D6E59]"
+              >
+                프린트카페 상세 안내 및 전체 가격표
+              </Link>
+            </p>
           </div>
 
           {/* Image */}
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden warm-shadow-lg">
-              <img
+              <Image
                 src="/images/print-room.jpg"
-                alt="OASIS 프린트카페"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                alt="OASIS 파주 운정 프린트카페 복합기"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             {/* Decorative element */}

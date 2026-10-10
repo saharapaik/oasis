@@ -6,11 +6,11 @@ export default function ContactSection() {
           <span className="text-[#8B6F47] text-sm tracking-[0.3em] uppercase font-medium mb-4 block">
             Contact & Location
           </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5D4E37] mb-6">
-            오시는 길 & 문의
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5D4E37] mb-6">
+            오시는 길 &amp; 문의
           </h2>
           <p className="text-xl text-[#6B5D52]">
-            OASIS에서 여러분을 기다리고 있습니다.
+            경기도 파주시 미래로 369-27 201호 · 운정신도시 · 주차 지원
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#5D4E37] mb-1">찾아오시는 길</h4>
-                  <p className="text-[#6B5D52]">운정신도시 내 위치</p>
+                  <p className="text-[#6B5D52]">파주 운정신도시 미래로</p>
                   <p className="text-[#6B5D52]">주차 가능</p>
                 </div>
               </div>
