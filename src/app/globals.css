@@ -80,3 +80,113 @@ h1, h2, h3 {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--deep-wood);
 }
+
+/* ───────── 블로그 본문 타이포그래피 (src/lib/markdown.tsx 출력 전용) ───────── */
+.prose-oasis {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #4A3F32;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.prose-oasis > * + * { margin-top: 1.25em; }
+.prose-oasis h2 {
+  margin-top: 2.75em;
+  padding-top: 0.25em;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: #5D4E37;
+  scroll-margin-top: 6rem;
+}
+.prose-oasis h2::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin-bottom: 1rem;
+  background: #7A9D7C;
+  border-radius: 999px;
+}
+.prose-oasis h3 {
+  margin-top: 2em;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #5D4E37;
+  scroll-margin-top: 6rem;
+}
+.prose-oasis h2 + h3 { margin-top: 1.25em; }
+.prose-oasis p.faq { margin-top: 1.5em; }
+.prose-oasis p.faq strong { display: block; color: #5D4E37; margin-bottom: 0.25em; }
+.prose-oasis strong { color: #5D4E37; font-weight: 700; }
+.prose-oasis a {
+  color: #7A9D7C;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color .15s;
+}
+.prose-oasis a:hover { color: #5D6E59; }
+.prose-oasis code {
+  font-size: 0.9em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.35em;
+  background: #F5F1E8;
+  color: #8B6F47;
+}
+.prose-oasis ul, .prose-oasis ol { padding-left: 1.5rem; }
+.prose-oasis ul { list-style: none; padding-left: 1.25rem; }
+.prose-oasis ul li { position: relative; }
+.prose-oasis ul li::before {
+  content: "";
+  position: absolute;
+  left: -1.1rem;
+  top: 0.8em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #A8B5A0;
+}
+.prose-oasis ol { list-style: decimal; }
+.prose-oasis ol li::marker { color: #8B6F47; font-weight: 700; }
+.prose-oasis li + li { margin-top: 0.4em; }
+.prose-oasis blockquote {
+  margin: 1.75em 0;
+  padding: 1.1rem 1.4rem;
+  border-left: 4px solid #C4B5A0;
+  background: #FFFFFF;
+  border-radius: 0 1rem 1rem 0;
+  color: #5D4E37;
+}
+.prose-oasis blockquote p { margin: 0; }
+.prose-oasis blockquote[data-tone="tip"]  { border-left-color: #7A9D7C; background: #F1F5EF; }
+.prose-oasis blockquote[data-tone="warn"] { border-left-color: #E8B4A4; background: #FBF1EE; }
+.prose-oasis .callout-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #7A9D7C;
+}
+.prose-oasis blockquote[data-tone="warn"] .callout-label { color: #C4826E; }
+.prose-oasis .table-wrap {
+  margin: 1.75em 0;
+  overflow-x: auto;
+  border: 1px solid #E8E3D9;
+  border-radius: 1rem;
+  background: #fff;
+}
+.prose-oasis table { width: 100%; border-collapse: collapse; font-size: 0.95rem; line-height: 1.5; }
+.prose-oasis th, .prose-oasis td { padding: 0.8rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid #EFEAE0; }
+.prose-oasis th { background: #F5F1E8; color: #5D4E37; font-weight: 700; white-space: nowrap; }
+.prose-oasis tbody tr:last-child td { border-bottom: 0; }
+.prose-oasis tbody tr:hover td { background: #FFFCF7; }
+.prose-oasis hr { margin: 3em auto; width: 4rem; border: 0; border-top: 2px solid #E8E3D9; }
+.prose-oasis figure { margin: 2em 0; }
+.prose-oasis figure img, .prose-oasis figure video { width: 100%; height: auto; border-radius: 1rem; display: block; }
+.prose-oasis figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: #A8987A; text-align: center; }
+@media (max-width: 640px) {
+  .prose-oasis { font-size: 1rem; }
+  .prose-oasis h2 { font-size: 1.5rem; }
+}

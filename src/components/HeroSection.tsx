@@ -32,7 +32,7 @@ export default function HeroSection() {
 
           <p className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed max-w-2xl">
             집중과 성장을 위한 공간. 24시간 연중무휴 스터디카페와
-            사업자등록 가능한 비상주오피스, 2~20인 회의실, 프린트카페를
+            사업자등록 가능한 비상주사무실, 2~20인 회의실, 프린트카페를
             한 건물에서 이용하세요.
           </p>
 

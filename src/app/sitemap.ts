@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, SERVICE_PAGES } from "@/lib/site";
+import { POSTS } from "@/lib/blog";
 
 /**
  * 사이트맵을 코드로 생성한다 — 이전 public/sitemap.xml 은
@@ -22,6 +23,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly" as const,
       priority: page.priority,
+    })),
+    {
+      url: `${SITE_URL}/blog`,
+      lastModified: new Date(POSTS[0]?.date ?? lastModified),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...POSTS.map((post) => ({
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.updated ?? post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
   ];
 }

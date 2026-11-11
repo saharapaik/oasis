@@ -15,15 +15,15 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "요금 안내 | 파주 운정 스터디카페·비상주오피스·회의실 가격표 OASIS",
+  title: "요금 안내 | 파주 운정 스터디카페·비상주사무실·회의실 가격표 OASIS",
   description:
-    "OASIS 전체 요금표. 스터디카페 1시간 1,000원·28일 79,000원, 비상주오피스 월 18,000원부터, 회의실 시간당 10,000원부터, 출력 70원부터. 파주 운정신도시.",
+    "OASIS 전체 요금표. 스터디카페 1시간 1,000원·28일 79,000원, 비상주사무실 월 12,000원부터, 회의실 시간당 10,000원부터, 출력 70원부터. 파주 운정신도시.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     ...OG_BASE,
-    title: "OASIS 요금 안내 — 파주 운정 스터디카페·비상주오피스·회의실",
+    title: "OASIS 요금 안내 — 파주 운정 스터디카페·비상주사무실·회의실",
     description:
-      "스터디카페·비상주오피스·회의실·프린트 전체 가격표를 한 페이지에 모았습니다.",
+      "스터디카페·비상주사무실·회의실·프린트 전체 가격표를 한 페이지에 모았습니다.",
     url: SITE_URL + "/pricing",
   },
 };
@@ -35,15 +35,15 @@ const faq = [
   },
   {
     q: "장기 계약 할인이 있나요?",
-    a: "있습니다. 비상주오피스 베이직은 1년 계약 시 월 18,000원, 6개월 25,000원, 3개월 30,000원으로 기간이 길수록 저렴해집니다. 그 외 장기 계약 할인은 전화로 문의해 주세요.",
+    a: "있습니다. 비상주사무실 베이직은 1년 계약 시 월 12,000원, 6개월 15,000원, 3개월 18,000원으로 기간이 길수록 저렴해집니다. 그 외 장기 계약 할인은 전화로 문의해 주세요.",
   },
   {
-    q: "비상주오피스 회원도 회의실 요금을 내야 하나요?",
+    q: "비상주사무실 회원도 회의실 요금을 내야 하나요?",
     a: "네, 다만 스탠다드는 컨퍼런스룸 10%, 프리미엄은 20% 할인됩니다. 프리미엄은 비즈니스라운지 월 4회 이용도 포함됩니다.",
   },
   {
     q: "요금은 어떻게 결제하나요?",
-    a: "스터디카페 좌석은 현장 키오스크에서 등록·결제할 수 있고, 비상주오피스와 회의실은 전화 또는 카카오톡 채널로 상담 후 진행합니다.",
+    a: "스터디카페 좌석은 현장 키오스크에서 등록·결제할 수 있고, 비상주사무실와 회의실은 전화 또는 카카오톡 채널로 상담 후 진행합니다.",
   },
   {
     q: "표에 없는 서비스 가격도 있나요?",
@@ -105,14 +105,14 @@ export default function PricingPage() {
             <span className="text-[#8B6F47]">전체 요금 안내</span>
           </>
         }
-        lead="스터디카페, 비상주오피스, 회의실, 프린트 요금을 한 페이지에 모았습니다. 장기 계약 시에는 별도 할인이 적용되며, 표에 없는 사항은 전화로 안내드립니다."
+        lead="스터디카페, 비상주사무실, 회의실, 프린트 요금을 한 페이지에 모았습니다. 장기 계약 시에는 별도 할인이 적용되며, 표에 없는 사항은 전화로 안내드립니다."
       >
         <nav aria-label="요금 항목 바로가기" className="flex flex-wrap gap-3">
           {[
             ["#study-cafe-price", "스터디카페"],
             ["#meeting-room-price", "회의실"],
             ["#print-price", "프린트"],
-            ["#office-price", "비상주오피스"],
+            ["#office-price", "비상주사무실"],
           ].map(([href, label]) => (
             <a
               key={href}
@@ -192,7 +192,7 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="mt-8 text-sm text-[#6B5D52]">
-            * 비상주오피스 스탠다드 회원 10%, 프리미엄 회원 20% 할인
+            * 비상주사무실 스탠다드 회원 10%, 프리미엄 회원 20% 할인
           </p>
         </div>
       </section>
@@ -220,16 +220,16 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* 비상주오피스 */}
+      {/* 비상주사무실 */}
       <section id="office-price" className="py-20 bg-[#F5F7F4] scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#5D4E37] mb-4">
-            비상주오피스 요금
+            비상주사무실 요금
           </h2>
           <p className="text-lg text-[#6B5D52] mb-10">
             사업자등록 주소가 필요한 분을 위한 월 단위 플랜입니다.{" "}
             <Link href="/virtual-office" className="text-[#7A9D7C] underline">
-              비상주오피스 안내 보기
+              비상주사무실 안내 보기
             </Link>
           </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -241,7 +241,7 @@ export default function PricingPage() {
                   (plan.popular ? "border-[#7A9D7C]" : "border-[#E8E3D9]")
                 }
               >
-                <h3 className="text-xl font-bold text-[#5D4E37] mb-4">{plan.name}</h3>
+                <h3 className="text-xl font-bold text-[#5D4E37] mb-4">비상주 {plan.name}</h3>
                 <p className="mb-2">
                   <span className="text-3xl font-bold text-[#5D4E37]">{plan.price}</span>
                   <span className="text-[#6B5D52]">{plan.unit}</span>

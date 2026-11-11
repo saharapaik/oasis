@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "파주 운정신도시 스터디카페 & 공유오피스 | 24시간 OASIS",
   description:
-    "경기도 파주시 운정신도시 OASIS. 24시간 연중무휴 스터디카페(1시간 1,000원~), 사업자등록 가능한 비상주오피스(월 18,000원~), 2~20인 회의실 대여, 프린트카페. 미래로 369-27 201호, 주차 지원.",
+    "경기도 파주시 운정신도시 OASIS. 24시간 연중무휴 스터디카페(1시간 1,000원~), 사업자등록 가능한 비상주사무실(월 12,000원~), 2~20인 회의실 대여, 프린트카페. 미래로 369-27 201호, 주차 지원.",
   alternates: { canonical: "/" },
   /**
    * keywords 메타태그는 Google 이 오래전부터 무시한다 — 지역·업종 키워드는
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "파주 운정신도시 스터디카페 & 공유오피스 OASIS",
     description:
-      "24시간 연중무휴 스터디카페, 사업자등록 가능한 비상주오피스, 2~20인 회의실, 프린트카페. 경기도 파주시 미래로 369-27 201호.",
+      "24시간 연중무휴 스터디카페, 사업자등록 가능한 비상주사무실, 2~20인 회의실, 프린트카페. 경기도 파주시 미래로 369-27 201호.",
     url: SITE_URL,
     siteName: "OASIS",
     locale: "ko_KR",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "파주 운정신도시 스터디카페 & 공유오피스 OASIS",
     description:
-      "24시간 연중무휴 스터디카페, 비상주오피스, 회의실 대여, 프린트카페. 파주시 미래로 369-27.",
+      "24시간 연중무휴 스터디카페, 비상주사무실, 회의실 대여, 프린트카페. 파주시 미래로 369-27.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -82,7 +82,7 @@ const localBusiness = {
   name: BIZ.name,
   alternateName: "OASIS 파주 운정점",
   description:
-    "파주 운정신도시의 24시간 스터디카페이자 공유오피스. 비상주오피스 사업자등록 주소, 2~20인 회의실 대여, 프린트카페를 함께 운영합니다.",
+    "파주 운정신도시의 24시간 스터디카페이자 공유오피스. 비상주사무실 사업자등록 주소, 2~20인 회의실 대여, 프린트카페를 함께 운영합니다.",
   url: SITE_URL,
   telephone: BIZ.phone,
   email: BIZ.email,
@@ -131,10 +131,10 @@ const localBusiness = {
       },
       {
         "@type": "Offer",
-        name: "비상주오피스 (사업자등록 주소)",
+        name: "비상주사무실 (사업자등록 주소)",
         url: SITE_URL + "/virtual-office",
         priceCurrency: "KRW",
-        price: 18000,
+        price: 12000,
       },
       {
         "@type": "Offer",

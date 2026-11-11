@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { OFFICE_PLANS } from "@/lib/site";
 
 export default function PricingSection() {
   const hourlyPrices = [
@@ -28,49 +29,7 @@ export default function PricingSection() {
     { period: "28일", price: "79,000원" },
   ];
 
-  const officePlans = [
-    {
-      name: "비상주 베이직",
-      price: "18,000",
-      unit: "원/월",
-      contract: "최소 3개월 계약",
-      priceNote: "1년 기준 / 6개월 25,000원 / 3개월 30,000원",
-      features: [
-        "사업자등록 주소 제공",
-      ],
-      popular: false,
-    },
-    {
-      name: "비상주 스탠다드",
-      price: "35,000",
-      unit: "원/월",
-      contract: "최소 3개월 계약",
-      priceNote: null,
-      features: [
-        "사업자등록 주소 제공",
-        "법인설립 지원",
-        "비즈니스라운지 월 1회",
-        "컨퍼런스룸 10% 할인",
-      ],
-      popular: true,
-    },
-    {
-      name: "비상주 프리미엄",
-      price: "55,000",
-      unit: "원/월",
-      contract: "1개월부터 계약 가능",
-      priceNote: null,
-      features: [
-        "사업자등록 주소 제공",
-        "법인설립 지원",
-        "우편물 알림 (사진전송)",
-        "비즈니스라운지 월 4회",
-        "컨퍼런스룸 20% 할인",
-        "세무사 무료 상담 1회",
-      ],
-      popular: false,
-    },
-  ];
+  const officePlans = OFFICE_PLANS;
 
   return (
     <section id="pricing" className="py-20 bg-[#F5F1E8] paper-texture">
@@ -210,10 +169,10 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* 비상주오피스 요금 */}
+        {/* 비상주사무실 요금 */}
         <div>
           <h3 className="text-2xl font-bold text-[#5D4E37] mb-8 text-center">
-            비상주오피스 요금
+            비상주사무실 요금
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -233,12 +192,14 @@ export default function PricingSection() {
                 )}
 
                 <div className="text-center mb-6">
-                  <h4 className="text-xl font-bold text-[#5D4E37] mb-2">{plan.name}</h4>
+                  <h4 className="text-xl font-bold text-[#5D4E37] mb-1">비상주 {plan.name}</h4>
+                  <p className="text-sm text-[#8B6F47]">{plan.tagline}</p>
                 </div>
 
                 <div className="text-center mb-6">
                   <span className="text-4xl font-bold text-[#5D4E37]">{plan.price}</span>
                   <span className="text-[#6B5D52]">{plan.unit}</span>
+                  <p className="mt-2 text-xs text-[#6B5D52]">{plan.contract} · {plan.priceNote}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">

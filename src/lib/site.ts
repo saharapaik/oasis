@@ -33,6 +33,9 @@ export const BIZ = {
   email: "solbay@naver.com",
   kakao: "http://pf.kakao.com/_gpqxnK",
   naverMap: "https://map.naver.com/p/search/경기도 파주시 미래로 369-27",
+  /** 네이버 플레이스 ID 5892840 — 영수증 리뷰는 이 플레이스의 방문자 리뷰 탭에 쌓인다. */
+  naverPlace: "https://m.place.naver.com/place/5892840/home",
+  naverPlaceReview: "https://m.place.naver.com/place/5892840/review/visitor",
   applyForm:
     "https://docs.google.com/forms/d/1BLz6-VJ6ClRiciqbcQ9hcVM7oItdhsj2il-jkMpf1lk/viewform",
   address: {
@@ -58,9 +61,9 @@ export const SERVICE_PAGES = [
   },
   {
     path: "/virtual-office",
-    label: "비상주오피스",
-    navLabel: "비상주오피스",
-    title: "파주 운정 비상주오피스",
+    label: "비상주사무실",
+    navLabel: "비상주사무실",
+    title: "파주 운정 비상주사무실",
     priority: 0.9,
   },
   {
@@ -138,43 +141,59 @@ export const MEETING_ROOMS = [
   },
 ] as const;
 
+/**
+ * 비상주사무실 요금 (2026-11-12 리뉴얼).
+ * 파주 시세는 월 1만~3만원이고 가장 가까운 경쟁업체(문발동)가 월 10,000원이라
+ * 베이직을 18,000 → 12,000원으로 내리고 우편물 도착 알림을 전 플랜에 넣었다.
+ * 1년 선납 기준 월 환산가이며 부가세 포함.
+ */
+export const OFFICE_MIN_PRICE = "12,000원";
+
 export const OFFICE_PLANS = [
   {
-    name: "비상주 베이직",
-    price: "18,000",
-    priceValue: 18000,
+    name: "베이직",
+    tagline: "사업자등록 주소만 필요할 때",
+    price: "12,000",
+    priceValue: 12000,
     unit: "원/월",
     contract: "최소 3개월 계약",
-    priceNote: "1년 기준 / 6개월 25,000원 / 3개월 30,000원",
-    features: ["사업자등록 주소 제공"],
+    priceNote: "1년 계약 기준 / 6개월 15,000원 / 3개월 18,000원",
+    features: [
+      "사업자등록 가능한 사업장 주소",
+      "사업자등록 서류 발급·안내",
+      "우편물 도착 알림 (카카오톡)",
+      "세금계산서 발행",
+    ],
     popular: false,
   },
   {
-    name: "비상주 스탠다드",
-    price: "35,000",
-    priceValue: 35000,
+    name: "스탠다드",
+    tagline: "법인·우편물이 있는 사업자",
+    price: "25,000",
+    priceValue: 25000,
     unit: "원/월",
     contract: "최소 3개월 계약",
-    priceNote: null,
+    priceNote: "1년 계약 기준 / 6개월 29,000원 / 3개월 33,000원",
     features: [
-      "사업자등록 주소 제공",
-      "법인설립 지원",
+      "베이직 혜택 전부 포함",
+      "법인설립·법인 주소 등기 지원",
+      "우편물 사진 전송",
       "비즈니스라운지 월 1회",
       "컨퍼런스룸 10% 할인",
     ],
     popular: true,
   },
   {
-    name: "비상주 프리미엄",
-    price: "55,000",
-    priceValue: 55000,
+    name: "프리미엄",
+    tagline: "회의·상담까지 한 번에",
+    price: "39,000",
+    priceValue: 39000,
     unit: "원/월",
     contract: "1개월부터 계약 가능",
-    priceNote: null,
+    priceNote: "단기 계약 가능 / 1년 계약 시 월 35,000원",
     features: [
-      "사업자등록 주소 제공",
-      "법인설립 지원",
-      "우편물 알림 (사진전송)",
+      "스탠다드 혜택 전부 포함",
+      "미팅룸 월 2시간 무료",
       "비즈니스라운지 월 4회",
       "컨퍼런스룸 20% 할인",
       "세무사 무료 상담 1회",

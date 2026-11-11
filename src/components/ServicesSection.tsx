@@ -20,11 +20,11 @@ const services = [
   },
   {
     id: "virtual-office",
-    title: "비상주오피스",
+    title: "비상주사무실",
     description: "사업자등록 가능한 비즈니스 주소",
     image: "/images/entrance.jpg",
-    alt: "파주 운정 OASIS 비상주오피스 건물 입구",
-    features: ["월 1.8만원~", "법인설립", "우편관리"],
+    alt: "파주 운정 OASIS 비상주사무실 건물 입구",
+    features: ["월 1.2만원~", "법인설립", "우편관리"],
   },
   {
     id: "print-cafe",
@@ -50,7 +50,7 @@ export default function ServicesSection() {
             필요한 모든 공간
           </h2>
           <p className="text-xl text-[#6B5D52] max-w-2xl">
-            스터디카페, 비상주오피스, 회의실, 프린트카페까지. OASIS는 운정신도시
+            스터디카페, 비상주사무실, 회의실, 프린트카페까지. OASIS는 운정신도시
             미래로 한 건물에서 모두 제공합니다.
           </p>
         </div>

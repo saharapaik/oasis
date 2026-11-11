@@ -12,7 +12,7 @@ export default function VirtualOfficeSection() {
               <div className="aspect-[3/4] overflow-hidden warm-shadow-lg">
                 <Image
                   src="/images/entrance.jpg"
-                  alt="OASIS 파주 운정 비상주오피스 건물 입구"
+                  alt="OASIS 파주 운정 비상주사무실 건물 입구"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover hover:scale-105 transition-transform duration-700"
@@ -38,19 +38,19 @@ export default function VirtualOfficeSection() {
               Virtual Office
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5D4E37] mb-8 leading-tight">
-              파주 운정 비상주오피스<br />
+              파주 운정 비상주사무실<br />
               사업자등록 주소
             </h2>
             <p className="text-xl text-[#6B5D52] mb-12 leading-relaxed max-w-xl">
               실제 사무실 없이도 파주 운정신도시의 사업장 주소를 확보하세요.
-              월 18,000원부터 시작하고 사업자등록과 법인설립을 지원합니다.
+              월 12,000원부터 시작하고 사업자등록과 법인설립을 지원합니다.
             </p>
 
             {/* Benefits Grid */}
             <div className="grid grid-cols-2 gap-x-12 gap-y-8 mb-12">
               <div>
-                <div className="text-4xl font-bold text-[#7A9D7C] mb-2">₩20K</div>
-                <p className="text-[#6B5D52]">월 2만원부터 시작</p>
+                <div className="text-4xl font-bold text-[#7A9D7C] mb-2">₩12K</div>
+                <p className="text-[#6B5D52]">월 12,000원부터</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-[#7A9D7C] mb-2">100%</div>
@@ -82,7 +82,7 @@ export default function VirtualOfficeSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 border-2 border-[#7A9D7C] text-[#5D4E37] px-8 py-4 text-lg font-semibold hover:bg-[#F5F1E8] transition-colors group"
               >
-                비상주오피스 신청하기
+                비상주사무실 신청하기
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -94,7 +94,7 @@ export default function VirtualOfficeSection() {
                 href="/virtual-office"
                 className="text-[#7A9D7C] font-semibold underline underline-offset-4 hover:text-[#5D6E59]"
               >
-                비상주오피스 플랜 비교 및 사업자등록 절차 보기
+                비상주사무실 플랜 비교 및 사업자등록 절차 보기
               </Link>
             </p>
           </div>

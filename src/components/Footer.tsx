@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="mt-4 text-[#C4B5A0] leading-relaxed">
               파주 운정신도시 스터디카페 &amp; 공유오피스 OASIS.
               <br />
-              24시간 연중무휴 스터디카페, 사업자등록 가능한 비상주오피스,
+              24시간 연중무휴 스터디카페, 사업자등록 가능한 비상주사무실,
               <br />
               2~20인 회의실과 프린트카페를 한 건물에서 운영합니다.
             </p>
@@ -34,6 +34,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/blog" className="hover:text-[#F5F1E8] transition-colors">
+                  블로그
+                </Link>
+              </li>
             </ul>
           </div>
 

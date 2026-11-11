@@ -13,6 +13,7 @@ export default function Header() {
    */
   const navItems = [
     ...SERVICE_PAGES.map((page) => ({ href: page.path, label: page.navLabel })),
+    { href: "/blog", label: "블로그" },
     { href: "/#contact", label: "오시는길" },
   ];
 
