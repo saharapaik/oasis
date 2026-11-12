@@ -120,7 +120,7 @@ export const virtualOfficeRegistration: Post = {
 **Q. 세무서에서 실사 나오면 어떻게 하나요?**
 OASIS 운영자가 응대합니다. 계약서와 입주자 명부가 준비되어 있어 확인 절차가 길어지지 않습니다.
 
-![공유오피스 로비 우편함에 우편물이 들어가는 모습](/images/blog/vo-mailboxes.jpg "우편물이 오면 카카오톡으로 알려드립니다")
+@video(/videos/blog/mailbox-loop.mp4 "우편물이 오면 카카오톡으로 알려드립니다")
 
 **Q. 우편물은 어떻게 받나요?**
 베이직은 도착 시 카카오톡으로 알려드리고 방문 수령, 스탠다드 이상은 봉투 사진을 보내드립니다.

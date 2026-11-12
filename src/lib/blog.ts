@@ -13,6 +13,14 @@ import { pajuNonOvercrowded } from "@/content/blog/paju-non-overcrowded-area-ben
 import { hometaxOnlineGuide } from "@/content/blog/hometax-business-registration-online";
 import { studyCafeChoosing } from "@/content/blog/unjeong-24h-study-cafe-guide";
 import { meetingRoomSmallGroup } from "@/content/blog/paju-meeting-room-small-group";
+import { virtualOfficeChecklist } from "@/content/blog/virtual-office-contract-checklist";
+import { onlineSellerRegistration } from "@/content/blog/online-seller-registration-gov24";
+import { smartstoreChecklist } from "@/content/blog/smartstore-startup-checklist";
+import { simplifiedVsGeneral } from "@/content/blog/simplified-vs-general-taxpayer";
+import { afterRegistrationTodo } from "@/content/blog/after-business-registration-todo";
+import { printBindingGuide } from "@/content/blog/paju-print-binding-guide";
+import { examStudyRoutine } from "@/content/blog/exam-study-routine-28days";
+import { noticeVirtualOfficePricing } from "@/content/blog/notice-2026-11-virtual-office-pricing";
 
 export const CATEGORIES = [
   { key: "virtual-office", label: "비상주사무실", color: "#7A9D7C" },
@@ -50,7 +58,15 @@ export const POSTS: Post[] = [
   virtualOfficeVsOthers,
   studyCafeChoosing,
   meetingRoomSmallGroup,
-].sort((a, b) => (a.date < b.date ? 1 : -1));
+  virtualOfficeChecklist,
+  onlineSellerRegistration,
+  smartstoreChecklist,
+  simplifiedVsGeneral,
+  afterRegistrationTodo,
+  printBindingGuide,
+  examStudyRoutine,
+  noticeVirtualOfficePricing,
+].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getPost(slug: string) {
   return POSTS.find((p) => p.slug === slug);

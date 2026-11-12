@@ -41,6 +41,30 @@ SCENES: dict[str, tuple[str, str, int]] = {
         "soft focus background, camera static",
         7103,
     ),
+    "lounge-loop": (
+        "blog-index-hero",
+        "slow smooth camera pan from left to right across the lounge, dust motes drifting in sunbeams, "
+        "plant leaves sway gently, curtains move softly, no people, cinematic",
+        7104,
+    ),
+    "hometax-typing-loop": (
+        "hometax-hero",
+        "slow push-in toward the laptop, screen glows softly and content scrolls slightly, "
+        "curtain sways in a light breeze, plant leaves move gently, no people",
+        7105,
+    ),
+    "print-cafe-loop": (
+        "print-cafe-hero",
+        "slow dolly forward in the print room, the copier scanner light bar sweeps under the lid, "
+        "a sheet of paper slides out into the tray, clean bright lighting, no people",
+        7106,
+    ),
+    "study-night-loop": (
+        "study-night-desk",
+        "warm desk lamp flickers gently, a page of the open book turns slowly, "
+        "city lights outside the window twinkle softly, slow push-in, no people",
+        7107,
+    ),
 }
 
 

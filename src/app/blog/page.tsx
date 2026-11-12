@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
@@ -64,13 +63,16 @@ export default function BlogIndexPage() {
             </div>
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl warm-shadow-lg">
-                <Image
-                  src="/images/blog/blog-index-hero.jpg"
-                  alt="서재처럼 꾸민 OASIS 라운지"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="object-cover"
+                <video
+                  src="/videos/blog/lounge-loop.mp4"
+                  poster="/images/blog/blog-index-hero.jpg"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="서재처럼 꾸민 OASIS 라운지"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
               <Link

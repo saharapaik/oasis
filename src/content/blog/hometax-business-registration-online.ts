@@ -16,6 +16,8 @@ export const hometaxOnlineGuide: Post = {
 
 이 글은 홈택스 화면 순서를 그대로 따라갑니다. 메뉴 이름은 2026년 홈택스 기준이며, 국세청이 메뉴를 개편하면 이름이 조금 달라질 수 있습니다.
 
+@video(/videos/blog/hometax-typing-loop.mp4 "집에서 15분, 수수료 0원")
+
 ## 시작 전에 준비할 것
 
 - **공동인증서(구 공인인증서) 또는 간편인증** — 카카오·네이버·PASS·토스 인증으로 로그인 가능

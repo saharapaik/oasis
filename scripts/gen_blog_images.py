@@ -101,6 +101,62 @@ SCENES: dict[str, tuple[str, int]] = {
         "soft afternoon sunlight, plants, no people",
         2701,
     ),
+    # ── 2차 (2026-11-12 오후) ──
+    "ecommerce-packing": (
+        "home studio desk for an online shop: small parcels being packed, kraft boxes, tape dispenser, "
+        "product photos on a laptop, hands from above partially visible, soft daylight",
+        2801,
+    ),
+    "smartstore-laptop": (
+        "laptop on a wooden desk showing a blurred e-commerce seller dashboard with product thumbnails, "
+        "a smartphone, a notebook and a cup of tea, no readable text, bright home office",
+        2802,
+    ),
+    "tax-calculator": (
+        "top-down view of a desk with a calculator, a stack of receipts, a ledger notebook, a pen and reading glasses, "
+        "warm lamp light, no readable text",
+        2803,
+    ),
+    "print-cafe-hero": (
+        "self-service print room: a modern multifunction copier, stacks of white paper, a spiral binding machine, "
+        "a laminator on a wooden counter, bright clean lighting, no people",
+        2804,
+    ),
+    "print-binding": (
+        "close-up of a freshly spiral-bound report with a clear cover on a wooden counter next to a stack of printed pages, "
+        "shallow depth of field, no readable text",
+        2805,
+    ),
+    "study-routine-hero": (
+        "morning study desk at a study cafe: open planner notebook, a kitchen timer, highlighters, a coffee cup, "
+        "sunlight through a window, no people, no readable text",
+        2806,
+    ),
+    "study-planner": (
+        "close-up of a monthly planner page with colorful highlighter marks and sticky notes, a pen on top, "
+        "warm desk light, no readable text",
+        2807,
+    ),
+    "post-registration-hero": (
+        "tidy office desk after starting a business: a business card holder, a company stamp, a debit card, "
+        "a laptop and a small plant, morning light, no readable text, no people",
+        2808,
+    ),
+    "checklist-hero": (
+        "clipboard with a checklist and a pen on a reception counter of a modern shared office, "
+        "wooden mailboxes blurred in the background, no readable text",
+        2809,
+    ),
+    "gov24-laptop": (
+        "laptop and smartphone on a desk showing a blurred blue government website, an ID card and documents beside, "
+        "soft window light, no readable text",
+        2810,
+    ),
+    "unjeong-street": (
+        "street level view of a Korean new town commercial street in the morning: modern low-rise buildings with cafes, "
+        "young trees, wide sidewalk, apartment towers behind, clear sky, no readable signage",
+        2811,
+    ),
 }
 
 

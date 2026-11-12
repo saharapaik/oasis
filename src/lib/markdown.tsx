@@ -250,7 +250,8 @@ export default function Markdown({ source }: { source: string }) {
             );
           case "video":
             return (
-              <figure key={i}>
+              <figure key={i} className="video">
+                <span className="video-badge" aria-hidden>▶ 영상</span>
                 <video src={b.src} autoPlay muted loop playsInline preload="metadata" poster={b.src.replace(/\.(mp4|webm)$/, ".jpg")} />
                 {b.caption && <figcaption>{b.caption}</figcaption>}
               </figure>
