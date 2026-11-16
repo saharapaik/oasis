@@ -10,7 +10,7 @@ export const freelancerVsBusiness: Post = {
   cover: "/images/blog/freelancer-invoice-desk.jpg",
   coverAlt: "노트북과 계산기, 영수증이 놓인 프리랜서의 작업 책상",
   tags: ["프리랜서 사업자등록", "3.3% 원천징수", "프리랜서 세금", "사업소득", "1인 사업자"],
-  cta: { href: "/virtual-office", label: "프리랜서 사업자등록용 주소, 월 12,000원" },
+  cta: { href: "/virtual-office", label: "프리랜서 사업자등록용 주소, 월 15,000원부터" },
   body: `
 프리랜서로 일을 시작하면 거래처가 대금에서 **3.3%를 떼고** 줍니다. 소득세 3%에 지방소득세 0.3%를 더한 사업소득 원천징수입니다. 이 상태로도 합법적으로 일할 수 있고, 5월에 종합소득세를 신고하면 뗀 세금 중 일부를 돌려받기도 합니다. 그래서 "사업자등록은 꼭 해야 하나요?"라는 질문이 나옵니다.
 

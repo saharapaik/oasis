@@ -103,7 +103,7 @@ export default function BlogIndexPage() {
       <section className="bg-[#F5F1E8] paper-texture py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
           {[
-            ["/virtual-office", "비상주사무실", "사업자등록 주소 월 12,000원부터"],
+            ["/virtual-office", "비상주사무실", "사업자등록 주소 월 15,000원부터"],
             ["/study-cafe", "스터디카페", "24시간 · 1시간 1,000원부터"],
             ["/meeting-room", "회의실 대여", "2~20인 · 시간당 10,000원부터"],
           ].map(([href, title, sub]) => (

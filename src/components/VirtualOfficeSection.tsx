@@ -43,14 +43,14 @@ export default function VirtualOfficeSection() {
             </h2>
             <p className="text-xl text-[#6B5D52] mb-12 leading-relaxed max-w-xl">
               실제 사무실 없이도 파주 운정신도시의 사업장 주소를 확보하세요.
-              월 12,000원부터 시작하고 사업자등록과 법인설립을 지원합니다.
+              하루 500원, 월 15,000원부터 시작하고 사업자등록과 법인설립을 지원합니다.
             </p>
 
             {/* Benefits Grid */}
             <div className="grid grid-cols-2 gap-x-12 gap-y-8 mb-12">
               <div>
-                <div className="text-4xl font-bold text-[#7A9D7C] mb-2">₩12K</div>
-                <p className="text-[#6B5D52]">월 12,000원부터</p>
+                <div className="text-4xl font-bold text-[#7A9D7C] mb-2">하루 500원</div>
+                <p className="text-[#6B5D52]">월 15,000원부터 (2년 계약, 부가세 별도)</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-[#7A9D7C] mb-2">100%</div>

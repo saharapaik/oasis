@@ -12,7 +12,7 @@ import { OG_BASE, BIZ, OFFICE_PLANS, OFFICE_MIN_PRICE, SITE_URL } from "@/lib/si
 /**
  * 비상주사무실 페이지 — 2026-11-12 리뉴얼.
  * "비상주오피스"보다 "비상주사무실" 검색량이 훨씬 많아 제목·H1·본문 용어를 바꿨고,
- * 파주 시세(월 1만~3만원)에 맞춰 베이직을 12,000원으로 내렸다.
+ * 요금은 2026-11-17 실제 운영가(1년 18,000 / 2년 15,000, 부가세 별도)로 확정 — src/lib/site.ts OFFICE_PLANS 참조.
  * 경쟁 비교표·업종 가능 여부·서류 체크리스트·블로그 연결을 추가해 체류시간과 전환을 함께 노린다.
  */
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ const faq = [
   },
   {
     q: "월 요금은 얼마인가요?",
-    a: `베이직 월 ${OFFICE_MIN_PRICE}(1년 계약 기준, 6개월 15,000원, 3개월 18,000원), 스탠다드 월 25,000원, 프리미엄 월 39,000원입니다. 부가세 포함이며 세금계산서를 발행합니다.`,
+    a: "베이직 월 18,000원(1년 계약 기준, 2년 15,000원, 6개월 22,000원, 3개월 25,000원), 스탠다드 월 25,000원, 프리미엄 월 39,000원입니다. 부가세 별도이며 세금계산서를 발행합니다.",
   },
   {
     q: "최소 계약 기간은 어떻게 되나요?",
@@ -195,11 +195,11 @@ export default function VirtualOfficePage() {
               <p className="mb-8 text-lg leading-relaxed text-[#6B5D52]">
                 온라인 판매를 시작하면 통신판매업 신고 주소가 소비자에게 공개됩니다. 전·월세라면 집주인 동의가
                 걸리고, 법인은 과밀억제권역이냐 아니냐로 설립 세금이 3배 차이 납니다. 비상주사무실은 이 세 가지를
-                월 {OFFICE_MIN_PRICE}에 한 번에 해결합니다.
+                월 {OFFICE_MIN_PRICE}부터 한 번에 해결합니다.
               </p>
               <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-2">
                 {[
-                  [`월 ${OFFICE_MIN_PRICE}부터`, "파주 시세 월 1만~3만 원대. 실제 사무실의 10분의 1 이하."],
+                  [`월 ${OFFICE_MIN_PRICE}부터`, "하루 500원꼴. 파주 시세 월 1만~3만 원대. 실제 사무실의 10분의 1 이하."],
                   ["집 주소 비공개", "쇼핑몰·세금계산서·계약서에 상업용 건물 주소가 찍힙니다."],
                   ["법인 설립 세금 1/3", "파주는 성장관리권역. 서울·고양의 등록면허세 중과가 없습니다."],
                   ["우편물 알림 기본", "도착 즉시 카카오톡 알림. 스탠다드부터 봉투 사진 전송."],
@@ -220,7 +220,7 @@ export default function VirtualOfficePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 text-3xl font-bold text-[#5D4E37] md:text-4xl">파주 비상주사무실 요금</h2>
           <p className="mb-12 text-lg text-[#6B5D52]">
-            부가세 포함, 세금계산서 발행. 1년 계약 기준 월 환산가이며 짧게 계약하면 조금 올라갑니다.
+            부가세 별도, 세금계산서 발행. 1년 계약 기준 월 요금이며 2년 계약은 더 내려가고 6개월·3개월은 조금 올라갑니다.
           </p>
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -308,7 +308,7 @@ export default function VirtualOfficePage() {
           </div>
 
           <p className="mt-6 text-sm text-[#6B5D52]">
-            매일 앉을 자리가 필요하면 비상주 베이직 + 스터디카페 28일권(79,000원) 조합이 월 91,000원으로 공유오피스
+            매일 앉을 자리가 필요하면 비상주 베이직(1년 18,000원) + 스터디카페 28일권(79,000원) 조합이 월 97,000원으로 공유오피스
             자유석의 절반입니다.{" "}
             <Link href="/pricing" className="text-[#7A9D7C] underline">
               전체 요금 안내
