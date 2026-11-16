@@ -157,6 +157,32 @@ SCENES: dict[str, tuple[str, int]] = {
         "young trees, wide sidewalk, apartment towers behind, clear sky, no readable signage",
         2811,
     ),
+    # ── 3차 (2026-11-16) ──
+    "corp-seal-documents": (
+        "top-down view of a dark walnut desk with a corporate registration document folder, a round company seal "
+        "and red ink pad, a stack of certificates, a fountain pen and reading glasses, soft morning window light, no readable text",
+        2601,
+    ),
+    "address-change-hero": (
+        "a tidy home desk with a laptop open beside a small cardboard moving box, a brown document envelope and a keyring, "
+        "warm afternoon light, plant in the background, no people, no readable text",
+        2602,
+    ),
+    "freelancer-invoice-desk": (
+        "freelancer workspace by a window: laptop, calculator, a few paper receipts and an invoice, a mug of coffee, "
+        "small succulent, warm natural light, shallow depth of field, no people, no readable text",
+        2603,
+    ),
+    "quiet-library-reading": (
+        "quiet public library reading room, long wooden table by tall windows, an open book and notebook, "
+        "rows of bookshelves softly out of focus, warm daylight, no people, no readable text",
+        2604,
+    ),
+    "paju-bridge-commute": (
+        "wide highway along a calm river at golden hour leading toward a modern Korean new town skyline with apartment towers, "
+        "soft haze, cinematic wide angle from a high viewpoint, no cars close up, no readable text",
+        2605,
+    ),
 }
 
 

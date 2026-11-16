@@ -259,3 +259,22 @@ npm run gsc -- 7     # 최근 7일
 **체류시간·이탈률**: GSC 에는 없는 지표. GA4(`GoogleAnalytics` 컴포넌트)와 Vercel Analytics 가 수집 중이지만
 이 서비스 계정에 GA4 속성 권한이 없어 조회 불가. 보려면 GA4 → 관리 → 속성 액세스 관리에 서비스 계정 이메일을
 "뷰어" 로 추가해야 한다(그 후 Data API 로 페이지별 평균 참여 시간을 스크립트에 붙일 수 있음).
+
+## ✍️ 2026-11-16 — 블로그 5편 추가 (총 19편) · 비상주사무실 유입 집중
+
+사용자 지시: **비상주사무실 유입이 최우선.** 5편 중 3편을 비상주 카테고리, 1편을 비상주로 이어지는 창업 글로 잡았다.
+
+| slug | 카테고리 | 노리는 검색어 |
+|---|---|---|
+| `virtual-office-corporate-registration` | 비상주 | 비상주사무실 법인 설립, 법인 본점 주소, 법인 사업자등록 |
+| `change-business-address-to-virtual-office` | 비상주 | 사업자등록 정정, 사업장 주소 변경, 집 주소 사업자 |
+| `ilsan-gimpo-startup-paju-virtual-office` | 비상주 | 일산·고양·김포 비상주사무실, 과밀억제권역 밖 |
+| `freelancer-3-3-vs-business-registration` | 창업 | 프리랜서 사업자등록, 3.3% 원천징수 |
+| `study-cafe-vs-reading-room-vs-library` | 스터디카페 | 스터디카페 독서실 차이, 파주 도서관 |
+
+- 커버 이미지 5장: `scripts/gen_blog_images.py` 3차 장면(`corp-seal-documents`, `address-change-hero`,
+  `freelancer-invoice-desk`, `quiet-library-reading`, `paju-bridge-commute`). 본문 삽입 이미지·영상은 기존 자산 재사용.
+- 글 사이 내부 링크를 비상주 가이드·체크리스트·요금 공지로 모았다. 모든 글 CTA 는 `/virtual-office` 또는 `/study-cafe`.
+- 날짜는 11-13~11-16 으로 분산(RSS·목록 최신순). 배포 후 할 일: GSC 사이트맵 재제출 + 신규 URL 색인 요청,
+  네이버 서치어드바이저 **RSS 제출**(`https://oasis-study.vercel.app/blog/feed.xml`, 요청 → RSS 제출 메뉴) 과 웹 페이지 수집 요청.
+- `npm run lint` 는 Next 16 에서 `next lint` 가 제거돼 깨져 있음(기존 문제). 검증은 `npx tsc --noEmit` + `npm run build` 로 했다.
