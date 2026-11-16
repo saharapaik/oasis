@@ -24,7 +24,7 @@ const services = [
     description: "사업자등록 가능한 비즈니스 주소",
     image: "/images/entrance.jpg",
     alt: "파주 운정 OASIS 비상주사무실 건물 입구",
-    features: ["월 1.2만원~", "법인설립", "우편관리"],
+    features: ["월 1.5만원~", "법인설립", "실사 응대"],
   },
   {
     id: "print-cafe",

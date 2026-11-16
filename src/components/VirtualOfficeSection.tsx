@@ -57,8 +57,8 @@ export default function VirtualOfficeSection() {
                 <p className="text-[#6B5D52]">사업자등록 지원</p>
               </div>
               <div>
-                <div className="text-4xl font-bold text-[#7A9D7C] mb-2">FREE</div>
-                <p className="text-[#6B5D52]">우편물 관리</p>
+                <div className="text-4xl font-bold text-[#7A9D7C] mb-2">0원</div>
+                <p className="text-[#6B5D52]">보증금·위약금</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-[#7A9D7C] mb-2">20%</div>

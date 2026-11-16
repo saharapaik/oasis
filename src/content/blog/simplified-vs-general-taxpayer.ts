@@ -10,7 +10,7 @@ export const simplifiedVsGeneral: Post = {
   cover: "/images/blog/tax-calculator.jpg",
   coverAlt: "계산기와 영수증이 놓인 책상",
   tags: ["간이과세", "일반과세", "부가가치세", "사업자등록", "개인사업자 세금"],
-  cta: { href: "/virtual-office", label: "프리미엄 플랜은 세무사 무료 상담 1회 포함 — 비상주사무실 안내" },
+  cta: { href: "/virtual-office", label: "과세 유형 고민은 계약 전 상담에서 — 비상주사무실 안내" },
   body: `
 홈택스 사업자등록 화면에서 가장 오래 멈추는 곳이 **"간이과세 / 일반과세"** 선택입니다. 한 번 고르면 1년은 못 바꾸는 경우가 많으니 10분만 투자해서 정하세요. 결론부터 말하면 **소비자에게 소액을 파는 쪽은 간이, 기업과 거래하거나 초기 투자가 큰 쪽은 일반**입니다.
 
