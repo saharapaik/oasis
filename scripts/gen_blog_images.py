@@ -183,6 +183,32 @@ SCENES: dict[str, tuple[str, int]] = {
         "soft haze, cinematic wide angle from a high viewpoint, no cars close up, no readable text",
         2605,
     ),
+    # 회의실 5편 (2026-11-17)
+    "meeting-room-compare": (
+        "small modern meeting room for four: wooden table, four chairs, a laptop, printed sheets and a calculator, "
+        "large window with a Korean new town view, soft daylight, no people",
+        2701,
+    ),
+    "seminar-room-setup": (
+        "20-seat seminar room ready for a presentation: projector screen at the front, rows of wooden desks with power outlets, "
+        "a presenter laptop on the front table, warm ceiling light, no people",
+        2702,
+    ),
+    "video-interview-room": (
+        "quiet small room prepared for a video interview: laptop with webcam on a tidy desk facing a plain beige wall, "
+        "ring light, headphones, a glass of water, neat and minimal, no people",
+        2703,
+    ),
+    "boardroom-minutes": (
+        "formal small boardroom table with printed meeting minutes, a corporate seal stamp box, name cards, "
+        "water glasses and pens neatly arranged, warm lamp light, no people",
+        2704,
+    ),
+    "study-group-table": (
+        "book club meeting in a cozy meeting room seen from behind: open books, notebooks and coffee cups on a shared wooden table, "
+        "three people from behind, warm evening light through blinds",
+        2705,
+    ),
 }
 
 

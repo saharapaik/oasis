@@ -26,6 +26,11 @@ import { changeBusinessAddress } from "@/content/blog/change-business-address-to
 import { freelancerVsBusiness } from "@/content/blog/freelancer-3-3-vs-business-registration";
 import { studyPlaceComparison } from "@/content/blog/study-cafe-vs-reading-room-vs-library";
 import { ilsanGimpoPajuVirtualOffice } from "@/content/blog/ilsan-gimpo-startup-paju-virtual-office";
+import { meetingRoomPriceCompare } from "@/content/blog/paju-meeting-room-price-compare";
+import { seminarRoomBriefing } from "@/content/blog/unjeong-seminar-room-briefing";
+import { videoInterviewRoom } from "@/content/blog/unjeong-video-interview-room";
+import { shareholderMeetingRoom } from "@/content/blog/corporate-shareholder-meeting-room-paju";
+import { regularGroupMeetingSpace } from "@/content/blog/unjeong-regular-group-meeting-space";
 
 export const CATEGORIES = [
   { key: "virtual-office", label: "비상주사무실", color: "#7A9D7C" },
@@ -76,6 +81,11 @@ export const POSTS: Post[] = [
   freelancerVsBusiness,
   studyPlaceComparison,
   ilsanGimpoPajuVirtualOffice,
+  meetingRoomPriceCompare,
+  seminarRoomBriefing,
+  videoInterviewRoom,
+  shareholderMeetingRoom,
+  regularGroupMeetingSpace,
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getPost(slug: string) {
