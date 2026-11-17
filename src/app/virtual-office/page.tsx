@@ -59,7 +59,7 @@ const faq = [
   },
   {
     q: "우편물은 어떻게 받나요?",
-    a: "OASIS에서 수령해 보관하고, 방문하시면 바로 찾아가실 수 있습니다. 세무서·관공서 고지서는 홈택스 전자송달로 받도록 안내드리며, 급한 우편이 있을 때는 카카오톡으로 말씀해 주시면 확인해 드립니다. 스탠다드부터는 요청 시 택배로 보내드리고(착불), 프리미엄은 월 1회 무료입니다.",
+    a: "우편물 수령·보관 서비스는 제공하지 않습니다. 사업자등록 직후 홈택스 전자송달, 국민연금·건강보험 전자고지, 정부24 전자문서를 설정하면 세무서·공단 고지서가 종이로 오지 않습니다. 은행·카드사·거래처 우편은 자택 주소나 이메일로 받도록 바꿔두시면 됩니다. 설정 방법은 계약 시 안내드립니다.",
   },
   {
     q: "통신판매업 신고와 스마트스토어 입점이 되나요?",
@@ -88,15 +88,26 @@ const okIndustries = [
   "디자인 · 영상 · 콘텐츠 제작 · 유튜브",
   "경영 컨설팅 · 교육 서비스(비대면) · 번역",
   "무역 · 수입 대행 (재고는 3PL 창고)",
+  "광고 대행 · 마케팅 · 1인 미디어 · 출판",
+  "프리랜서 (강사 · 작가 · 개발자 · 사진)",
+  "방문형 서비스 (청소 · 출장 미용 · 과외 · 학습지)",
   "법인 본점 소재지 (주식회사 · 유한회사)",
 ];
+/** 등록은 되지만 별도 인허가·신고 요건이 있어 업종 확인 후 진행하는 것들 */
+const checkIndustries = [
+  "화장품 온라인 판매 (책임판매업 등록 필요, 사무실 주소로 가능)",
+  "건강기능식품 · 식품 온라인 판매 (영업 신고 요건 확인)",
+  "OEM 위탁 제조 브랜드 (공장 없이 제조업 코드 등록)",
+  "보험대리점 · 금융상품 판매 대리",
+  "여행업 · 인력 공급업 (관할 심사 있음)",
+];
 const noIndustries = [
-  "음식점 · 카페 등 식품접객업",
+  "음식점 · 카페 등 식품접객업 (영업장 필수)",
   "공장 등록이 필요한 제조업",
-  "학원 · 교습소 (시설 기준 심사)",
+  "학원 · 교습소 (시설 기준 심사 — 온라인 강의·과외는 가능)",
   "의료 · 약국 · 숙박 · 유흥업",
   "사업장에 재고를 두는 창고형 도소매",
-  "부동산 중개업",
+  "부동산 중개업 · 건설업 면허 · 대부업 (독립 사무실 요건)",
 ];
 
 const documents = [
@@ -299,7 +310,7 @@ export default function VirtualOfficePage() {
                   ["집 주소 공개", "공개됨", "비공개", "비공개", "비공개"],
                   ["집주인 동의", "전·월세는 필요", "불필요", "불필요", "불필요"],
                   ["법인 본점", "동의 필요", "가능", "가능", "가능"],
-                  ["우편물", "집으로", "보관·요청 시 택배", "보관", "직접"],
+                  ["우편물", "집으로", "전자송달 설정 (수령 서비스 없음)", "보관", "직접"],
                   ["회의 공간", "없음", "미팅룸 회원가 5천 원/시간 (프리미엄 월 4시간 무료)", "포함", "포함"],
                 ].map(([k, ...v]) => (
                   <tr key={k}>
@@ -330,15 +341,27 @@ export default function VirtualOfficePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 text-3xl font-bold text-[#5D4E37] md:text-4xl">등록 가능한 업종, 안 되는 업종</h2>
           <p className="mb-10 text-lg text-[#6B5D52]">
-            실제 영업장이 있어야 인허가가 나오는 업종은 비상주 주소로 등록이 안 됩니다. 애매하면 업종만 알려주세요.
+            사업자등록 자체는 대부분의 서비스·온라인 업종이 됩니다. 안 되는 것은 영업장 실체가 있어야 인허가가 나오는
+            업종이고, 중간에 있는 업종은 인허가 요건만 맞추면 됩니다. 애매하면 업종만 알려주세요.
           </p>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-2xl border border-[#D7E3D5] bg-[#F5F7F4] p-8">
               <h3 className="mb-5 text-xl font-bold text-[#5D6E59]">가능</h3>
               <ul className="space-y-3">
                 {okIndustries.map((t) => (
                   <li key={t} className="flex items-start gap-2 text-[#5D4E37]">
                     <span className="font-bold text-[#7A9D7C]">✓</span>
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-[#E8E3D9] bg-[#FFF9F0] p-8">
+              <h3 className="mb-5 text-xl font-bold text-[#8B6F47]">확인 후 가능</h3>
+              <ul className="space-y-3">
+                {checkIndustries.map((t) => (
+                  <li key={t} className="flex items-start gap-2 text-[#5D4E37]">
+                    <span className="font-bold text-[#D9A066]">?</span>
                     {t}
                   </li>
                 ))}
