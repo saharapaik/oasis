@@ -117,6 +117,7 @@ export default function PricingSection() {
               <h4 className="text-xl font-bold text-[#5D4E37] mb-2">미팅룸</h4>
               <p className="text-[#6B5D52] mb-4">2~4인</p>
               <div className="text-3xl font-bold text-[#8B6F47]">10,000<span className="text-lg text-[#6B5D52]">원/시간</span></div>
+              <p className="mt-2 text-sm text-[#6B5D52]">최소 2시간 · 반일 35,000 · 종일 60,000</p>
             </div>
 
             <div className="bg-[#FFF9F0] rounded-2xl p-6 border border-[#E8E3D9] text-center warm-shadow">
@@ -126,8 +127,9 @@ export default function PricingSection() {
                 </svg>
               </div>
               <h4 className="text-xl font-bold text-[#5D4E37] mb-2">컨퍼런스룸</h4>
-              <p className="text-[#6B5D52] mb-4">10~20인</p>
-              <div className="text-3xl font-bold text-[#8B6F47]">70,000<span className="text-lg text-[#6B5D52]">원/시간</span></div>
+              <p className="text-[#6B5D52] mb-4">5~20인</p>
+              <div className="text-3xl font-bold text-[#8B6F47]">40,000<span className="text-lg text-[#6B5D52]">원/시간~</span></div>
+              <p className="mt-2 text-sm text-[#6B5D52]">10인 이하 40,000 · 11~20인 60,000</p>
             </div>
           </div>
         </div>

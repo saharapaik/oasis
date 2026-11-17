@@ -36,6 +36,8 @@ export const BIZ = {
   /** 네이버 플레이스 ID 5892840 — 영수증 리뷰는 이 플레이스의 방문자 리뷰 탭에 쌓인다. */
   naverPlace: "https://m.place.naver.com/place/5892840/home",
   naverPlaceReview: "https://m.place.naver.com/place/5892840/review/visitor",
+  /** 네이버 예약 — 스마트플레이스에 미팅룸·컨퍼런스룸 예약 상품을 등록해야 이 탭이 열린다. */
+  naverBooking: "https://m.place.naver.com/place/5892840/booking",
   applyForm:
     "https://docs.google.com/forms/d/1BLz6-VJ6ClRiciqbcQ9hcVM7oItdhsj2il-jkMpf1lk/viewform",
   address: {
@@ -125,20 +127,33 @@ export const MEETING_ROOMS = [
     price: "10,000원",
     priceValue: 10000,
     priceUnit: "/시간",
+    priceNote: "최소 2시간 · 반일(4시간) 35,000원 · 종일(8시간) 60,000원",
+    target: "과외 · 거래처 미팅 · 소모임 · 화상 면접",
     image: "/images/meeting-room-2.jpg",
     alt: "OASIS 파주 운정 미팅룸 2-4인 소회의실 내부",
     features: ["무료 Wi-Fi", "정수기 이용", "콘센트 완비", "쾌적한 냉난방", "주차 지원"],
   },
   {
     name: "컨퍼런스룸",
-    capacity: "10-20인",
-    price: "70,000원",
-    priceValue: 70000,
+    capacity: "5-20인",
+    price: "40,000원~",
+    priceValue: 40000,
     priceUnit: "/시간",
+    priceNote: "10인 이하 40,000원 · 11~20인 60,000원 / 반일(4시간) 10% · 종일(8시간) 20% 할인",
+    target: "학원 설명회 · 소규모 강의 · 온라인 셀러 촬영 · 법인 주주총회",
     image: "/images/meeting-room-1.jpg",
     alt: "OASIS 파주 운정 컨퍼런스룸 10-20인 대회의실 내부",
     features: ["대형 스크린", "빔프로젝터", "개인 콘센트", "쾌적한 냉난방", "주차 지원"],
   },
+] as const;
+
+/** 회의실 할인 (2026-11-17). 중복 적용 불가, 가장 큰 할인 하나만. */
+export const MEETING_DISCOUNTS = [
+  "정기 모임: 월 4회 이상 선결제 시 20% 할인",
+  "평일 낮(10~17시) 이용 20% 할인",
+  "비상주사무실 회원: 미팅룸 50% 할인 (프리미엄은 월 4시간 무료)",
+  "비상주 스탠다드 컨퍼런스룸 10%, 프리미엄 20% 할인",
+  "스터디카페 28일권 회원: 미팅룸 월 1시간 무료",
 ] as const;
 
 /**
@@ -167,6 +182,7 @@ export const OFFICE_PLANS = [
       "세무서 실사·확인 전화 응대",
       "사업자등록 반려 시 전액 환불",
       "우편물 수령·보관",
+      "미팅룸 50% 할인",
       "세금계산서 발행",
     ],
     popular: true,

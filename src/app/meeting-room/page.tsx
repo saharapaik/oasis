@@ -4,18 +4,18 @@ import PageHero from "@/components/PageHero";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
-import { OG_BASE, BIZ, MEETING_ROOMS, SITE_URL } from "@/lib/site";
+import { OG_BASE, BIZ, MEETING_ROOMS, MEETING_DISCOUNTS, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "파주 운정 회의실 대여 | 2~20인 미팅룸·컨퍼런스룸 OASIS",
   description:
-    "파주 운정신도시 회의실 대여. 미팅룸(2~4인) 시간당 10,000원, 컨퍼런스룸(10~20인) 시간당 70,000원. 빔프로젝터·대형 스크린·주차 지원. 경기도 파주시 미래로 369-27.",
+    "파주 운정신도시 회의실 대여. 미팅룸(2~4인) 시간당 10,000원, 컨퍼런스룸 10인 이하 40,000원·11~20인 60,000원. 네이버 예약 가능. 빔프로젝터·대형 스크린·주차 지원. 경기도 파주시 미래로 369-27.",
   alternates: { canonical: "/meeting-room" },
   openGraph: {
     ...OG_BASE,
     title: "파주 운정 회의실 대여 OASIS — 미팅룸·컨퍼런스룸",
     description:
-      "운정신도시 회의실 대여. 미팅룸 2~4인 시간당 10,000원, 컨퍼런스룸 10~20인 시간당 70,000원.",
+      "운정신도시 회의실 대여. 미팅룸 2~4인 시간당 10,000원, 컨퍼런스룸 10인 이하 40,000원·11~20인 60,000원. 네이버 예약 가능.",
     url: SITE_URL + "/meeting-room",
   },
 };
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 const faq = [
   {
     q: "회의실 대여 요금은 얼마인가요?",
-    a: "미팅룸(2~4인)은 시간당 10,000원, 컨퍼런스룸(10~20인)은 시간당 70,000원입니다. 비상주사무실 회원은 컨퍼런스룸을 플랜에 따라 10~20% 할인받을 수 있습니다.",
+    a: "미팅룸(2~4인)은 시간당 10,000원(최소 2시간), 컨퍼런스룸은 10인 이하 40,000원, 11~20인 60,000원입니다. 반일·종일 패키지와 평일 낮 20% 할인, 정기 모임 월 4회 선결제 20% 할인이 있고, 비상주사무실 회원은 미팅룸 50%·컨퍼런스룸 10~20% 할인입니다.",
   },
   {
     q: "최대 몇 명까지 들어갈 수 있나요?",
-    a: "미팅룸은 2~4인, 컨퍼런스룸은 10~20인 규모입니다. 20명을 넘는 행사는 공간상 어려워 사전에 전화로 문의해 주세요.",
+    a: "미팅룸은 2~4인, 컨퍼런스룸은 5~20인 규모입니다. 5~10인 모임도 컨퍼런스룸을 40,000원에 쓸 수 있습니다. 20명을 넘는 행사는 공간상 어려워 사전에 전화로 문의해 주세요.",
   },
   {
     q: "예약은 어떻게 하나요?",
-    a: "전화(" + BIZ.phone + ") 또는 카카오톡 채널로 희망 날짜와 시간을 알려주시면 예약을 확인해 드립니다.",
+    a: "네이버 예약에서 날짜와 시간을 골라 바로 예약할 수 있습니다. 전화(" + BIZ.phone + ")나 카카오톡 채널로 문의하셔도 됩니다.",
   },
   {
     q: "빔프로젝터나 스크린이 있나요?",
@@ -52,12 +52,12 @@ const faq = [
 ];
 
 const useCases = [
-  "파주·운정 지역 소규모 팀 회의와 1:1 면담",
-  "스타트업 투자 미팅과 사업 설명회",
-  "학회·동호회 정기 모임과 스터디 발표",
-  "교육·세미나 및 직무 교육 진행",
-  "면접 및 채용 설명회",
-  "프로젝트 단기 작업 공간",
+  "과외·소규모 스터디·독서 모임 (미팅룸, 1인당 시간당 2,500원)",
+  "거래처 미팅·화상 면접·1:1 상담",
+  "학원·학습지 설명회와 소규모 강의 (컨퍼런스룸, 빔프로젝터)",
+  "온라인 셀러 상품 촬영·라이브 방송 (조용한 실내, 개인 콘센트)",
+  "법인 주주총회·이사회 (비상주 회원 할인)",
+  "동호회 정기 모임 (월 4회 선결제 20% 할인)",
 ];
 
 export default function MeetingRoomPage() {
@@ -96,9 +96,17 @@ export default function MeetingRoomPage() {
             <span className="text-[#8B6F47]">2~20인 미팅룸·컨퍼런스룸</span>
           </>
         }
-        lead="운정신도시 미래로에 있는 시간제 회의실입니다. 소규모 미팅은 시간당 10,000원, 20인까지 들어가는 컨퍼런스룸은 시간당 70,000원이며 빔프로젝터와 대형 스크린, 주차를 지원합니다."
+        lead="운정신도시 미래로에 있는 시간제 회의실입니다. 소규모 미팅은 시간당 10,000원, 컨퍼런스룸은 10인 이하 40,000원·11~20인 60,000원이며 빔프로젝터와 대형 스크린, 주차를 지원합니다. 네이버 예약으로 바로 잡을 수 있습니다."
       >
         <div className="flex flex-wrap gap-4">
+          <a
+            href={BIZ.naverBooking}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#03C75A] text-white px-8 py-4 font-semibold hover:bg-[#02b150] transition-colors"
+          >
+            네이버 예약으로 바로 잡기
+          </a>
           <a
             href={"tel:" + BIZ.phone}
             className="bg-[#5D4E37] text-white px-8 py-4 font-semibold hover:bg-[#8B6F47] transition-colors"
@@ -153,6 +161,8 @@ export default function MeetingRoomPage() {
                       <span className="text-sm text-[#6B5D52]">{room.priceUnit}</span>
                     </p>
                   </div>
+                  <p className="mb-2 text-sm text-[#8B6F47]">{room.priceNote}</p>
+                  <p className="mb-6 text-sm text-[#6B5D52]">추천: {room.target}</p>
                   <ul className="flex flex-wrap gap-2">
                     {room.features.map((feature) => (
                       <li
@@ -186,12 +196,22 @@ export default function MeetingRoomPage() {
             ))}
           </ul>
 
-          <div className="mt-12 bg-white border border-[#E8E3D9] p-8">
+          <div className="mt-12 bg-white border border-[#7A9D7C] p-8">
+            <h3 className="text-xl font-bold text-[#5D4E37] mb-4">할인 안내</h3>
+            <ul className="space-y-2 text-[#6B5D52]">
+              {MEETING_DISCOUNTS.map((d) => (
+                <li key={d}>· {d}</li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm text-[#8B6F47]">할인은 중복되지 않으며 가장 큰 할인 하나가 적용됩니다.</p>
+          </div>
+
+          <div className="mt-8 bg-white border border-[#E8E3D9] p-8">
             <h3 className="text-xl font-bold text-[#5D4E37] mb-4">예약 전 확인해 주세요</h3>
             <ul className="space-y-2 text-[#6B5D52]">
               <li>· 화이트보드, TV 모니터, 음향 시스템은 제공하지 않습니다.</li>
               <li>· 케이터링과 무료 음료는 제공하지 않으며 정수기는 이용 가능합니다.</li>
-              <li>· 비상주사무실 회원은 컨퍼런스룸을 10~20% 할인받습니다.</li>
+              <li>· 미팅룸은 최소 2시간부터 예약됩니다.</li>
               <li>· 주차를 지원하며, 인원이 많을 경우 예약 시 알려주세요.</li>
             </ul>
           </div>
@@ -201,8 +221,8 @@ export default function MeetingRoomPage() {
       <Faq items={faq} heading="파주 운정 회의실 대여 자주 묻는 질문" />
 
       <CtaBand
-        heading="회의실 예약, 통화 한 번으로 끝납니다"
-        description="희망 날짜와 인원만 알려주시면 가능 시간을 바로 확인해 드립니다."
+        heading="회의실 예약, 네이버에서 바로 잡으세요"
+        description="네이버 예약에서 빈 시간을 확인하고 결제까지 끝낼 수 있습니다. 전화·카카오톡 문의도 받습니다."
       />
     </>
   );

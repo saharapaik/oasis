@@ -1,24 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BIZ, MEETING_ROOMS } from "@/lib/site";
 
-const rooms = [
-  {
-    name: "미팅룸",
-    capacity: "2-4인",
-    price: "10,000원",
-    priceUnit: "/시간",
-    image: "/images/meeting-room-2.jpg",
-    features: ["무료 Wi-Fi", "정수기 이용", "콘센트 완비", "쾌적한 냉난방", "주차 지원"],
-  },
-  {
-    name: "컨퍼런스룸",
-    capacity: "10-20인",
-    price: "70,000원",
-    priceUnit: "/시간",
-    image: "/images/meeting-room-1.jpg",
-    features: ["대형 스크린", "빔프로젝터", "개인 콘센트", "쾌적한 냉난방", "주차 지원"],
-  },
-];
+const rooms = MEETING_ROOMS;
 
 export default function MeetingRoomSection() {
   return (
@@ -34,8 +18,8 @@ export default function MeetingRoomSection() {
             2~20인 미팅룸·컨퍼런스룸
           </h2>
           <p className="text-xl text-[#6B5D52] max-w-2xl">
-            소규모 미팅은 시간당 10,000원, 20인까지 들어가는 컨퍼런스룸은
-            시간당 70,000원입니다. 빔프로젝터와 대형 스크린, 주차를 지원합니다.
+            소규모 미팅은 시간당 10,000원, 컨퍼런스룸은 10인 이하 40,000원·11~20인 60,000원입니다.
+            빔프로젝터와 대형 스크린, 주차를 지원하고 네이버 예약으로 바로 잡을 수 있습니다.
           </p>
         </div>
 
@@ -71,6 +55,7 @@ export default function MeetingRoomSection() {
                     <div className="text-sm text-[#6B5D52]">{room.priceUnit}</div>
                   </div>
                 </div>
+                <p className="mb-4 text-sm text-[#8B6F47]">{room.priceNote}</p>
                 <div className="flex flex-wrap gap-2">
                   {room.features.map((feature) => (
                     <span
@@ -89,10 +74,12 @@ export default function MeetingRoomSection() {
         {/* CTA */}
         <div className="text-center">
           <a
-            href="#contact"
+            href={BIZ.naverBooking}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#5D4E37] text-white px-10 py-5 text-lg font-semibold hover:bg-[#8B6F47] transition-colors group"
           >
-            회의실 예약하기
+            네이버 예약으로 회의실 잡기
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
