@@ -4,4 +4,4 @@ Disallow: /coupon-template.html
 
 Sitemap: https://oasis-study.vercel.app/sitemap.xml
 
-#DaumWebMasterTool:0c4561a4c9d75dbe8e55ef8c6a3e755be8c39e5788962c9deccf56879494bb5a:/U8QWp/Cxm097lAEJOWTSw==
+#DaumWebMasterTool:0c4561a4c9d75dbe8e55ef8c6a3e755be8c39e5788962c9deccf56879494bb5a:9OXzxfMP1b1VGCOsL/bJCQ==
